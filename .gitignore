@@ -28,3 +28,16 @@ ios/Pods/
 .flutter-plugins-dependencies
 # Environment variables
 .env
+
+# Local Python/export environment
+.export_env/
+
+# Temporary model-export files
+*.npy
+
+# Local test images
+test_crop.png
+
+# Python cache
+__pycache__/
+*.pyc
