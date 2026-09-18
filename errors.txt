@@ -1,0 +1,864 @@
+Analyzing crop_analyzer...                                      
+
+warning - Unused import: 'package:flutter/material.dart' - lib\app\router\app_routes.dart:1:8 - unused_import
+   info - 'background' is deprecated and shouldn't be used. Use surface instead. This feature was deprecated after v3.18.0-0.1.pre - lib\app\theme\app_colors.dart:187:5 - deprecated_member_use
+   info - 'onBackground' is deprecated and shouldn't be used. Use onSurface instead. This feature was deprecated after v3.18.0-0.1.pre - lib\app\theme\app_colors.dart:188:5 - deprecated_member_use
+   info - 'background' is deprecated and shouldn't be used. Use surface instead. This feature was deprecated after v3.18.0-0.1.pre - lib\app\theme\app_theme.dart:151:7 - deprecated_member_use
+   info - 'onBackground' is deprecated and shouldn't be used. Use onSurface instead. This feature was deprecated after v3.18.0-0.1.pre - lib\app\theme\app_theme.dart:156:7 - deprecated_member_use
+   info - 'MaterialStateProperty' is deprecated and shouldn't be used. Use WidgetStateProperty instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\app\theme\app_theme.dart:288:21 - deprecated_member_use
+   info - 'MaterialStateProperty' is deprecated and shouldn't be used. Use WidgetStateProperty instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\app\theme\app_theme.dart:289:21 - deprecated_member_use
+   info - 'MaterialStateProperty' is deprecated and shouldn't be used. Use WidgetStateProperty instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\app\theme\app_theme.dart:292:20 - deprecated_member_use
+   info - 'MaterialStateProperty' is deprecated and shouldn't be used. Use WidgetStateProperty instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\app\theme\app_theme.dart:298:20 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\app\theme\app_theme.dart:304:36 - deprecated_member_use
+   info - 'background' is deprecated and shouldn't be used. Use surface instead. This feature was deprecated after v3.18.0-0.1.pre - lib\app\theme\app_theme.dart:339:7 - deprecated_member_use
+   info - 'onBackground' is deprecated and shouldn't be used. Use onSurface instead. This feature was deprecated after v3.18.0-0.1.pre - lib\app\theme\app_theme.dart:344:7 - deprecated_member_use
+   info - 'MaterialStateProperty' is deprecated and shouldn't be used. Use WidgetStateProperty instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\app\theme\app_theme.dart:471:21 - deprecated_member_use
+   info - 'MaterialStateProperty' is deprecated and shouldn't be used. Use WidgetStateProperty instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\app\theme\app_theme.dart:472:21 - deprecated_member_use
+   info - 'MaterialStateProperty' is deprecated and shouldn't be used. Use WidgetStateProperty instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\app\theme\app_theme.dart:475:20 - deprecated_member_use
+   info - 'MaterialStateProperty' is deprecated and shouldn't be used. Use WidgetStateProperty instead. Moved to the Widgets layer to make code available outside of Material. This feature was deprecated after v3.19.0-0.3.pre - lib\app\theme\app_theme.dart:481:20 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\app\theme\app_theme.dart:487:36 - deprecated_member_use
+   info - The import of 'package:hive/hive.dart' is unnecessary because all of the used elements are also provided by the import of 'package:hive_flutter/hive_flutter.dart' - lib\core\database\hive_service.dart:5:8 - unnecessary_import
+warning - Unused import: 'package:crypto/crypto.dart' - lib\core\database\hive_service.dart:8:8 - unused_import
+   info - The imported package 'http_parser' isn't a dependency of the importing package - lib\core\network\api_client.dart:6:8 - depend_on_referenced_packages
+warning - Unused import: 'dart:io' - lib\core\network\interceptors.dart:3:8 - unused_import
+  error - The name 'onConnectionTypeChanged' is already defined - lib\core\network\network_info.dart:234:8 - duplicate_definition
+   info - The imported package 'firebase_analytics' isn't a dependency of the importing package - lib\core\services\analytics_service.dart:3:8 - depend_on_referenced_packages
+  error - Target of URI doesn't exist: 'package:firebase_analytics/firebase_analytics.dart' - lib\core\services\analytics_service.dart:3:8 - uri_does_not_exist
+   info - The imported package 'device_info_plus' isn't a dependency of the importing package - lib\core\services\analytics_service.dart:5:8 - depend_on_referenced_packages
+  error - Undefined class 'FirebaseAnalytics' - lib\core\services\analytics_service.dart:13:8 - undefined_class
+  error - Undefined name 'FirebaseAnalytics' - lib\core\services\analytics_service.dart:22:18 - undefined_identifier
+  error - The keywords 'await' and 'yield' can't be used as identifiers in an asynchronous or generator function - lib\core\services\analytics_service.dart:84:69 - async_keyword_used_as_identifier
+warning - Dead code - lib\core\services\analytics_service.dart:252:38 - dead_code
+warning - The left operand can't be null, so the right operand is never executed - lib\core\services\analytics_service.dart:252:41 - dead_null_aware_expression
+warning - Dead code - lib\core\services\analytics_service.dart:255:44 - dead_code
+warning - The left operand can't be null, so the right operand is never executed - lib\core\services\analytics_service.dart:255:47 - dead_null_aware_expression
+  error - The class 'GoogleSignIn' doesn't have an unnamed constructor - lib\core\services\auth_service.dart:63:38 - new_with_undefined_constructor_default
+  error - The method 'signIn' isn't defined for the type 'GoogleSignIn' - lib\core\services\auth_service.dart:101:46 - undefined_method
+   info - The imported package 'permission_handler' isn't a dependency of the importing package - lib\core\services\camera_service.dart:7:8 - depend_on_referenced_packages
+  error - Target of URI doesn't exist: 'package:permission_handler/permission_handler.dart' - lib\core\services\camera_service.dart:7:8 - uri_does_not_exist
+warning - The value of the field '_isInitialized' isn't used - lib\core\services\camera_service.dart:18:8 - unused_field
+  error - Undefined name 'Permission' - lib\core\services\camera_service.dart:65:32 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\camera_service.dart:66:33 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\camera_service.dart:67:29 - undefined_identifier
+warning - Unused import: 'package:flutter/material.dart' - lib\core\services\chatbot_service.dart:3:8 - unused_import
+   info - The private field _language could be 'final' - lib\core\services\chatbot_service.dart:53:10 - prefer_final_fields
+warning - The value of the field '_language' isn't used - lib\core\services\chatbot_service.dart:53:10 - unused_field
+warning - The value of the field '_firebaseApp' isn't used - lib\core\services\firebase_service.dart:15:20 - unused_field
+  error - The name 'Uint8List' isn't a type, so it can't be used as a type argument - lib\core\services\firebase_service.dart:147:10 - non_type_as_type_argument
+  error - A value of type 'List<dynamic>' can't be returned from the method 'queryDocuments' because it has a return type of 'Future<List<Map<String, dynamic>>>' - lib\core\services\firestore_service.dart:111:14 - return_of_invalid_type
+  error - This literal must be either a map or a set, but the elements don't have enough information for type inference to work - lib\core\services\firestore_service.dart:111:41 - ambiguous_set_or_map_literal_either
+  error - A nullable expression can't be used in a spread - lib\core\services\firestore_service.dart:111:59 - unchecked_use_of_nullable_value
+  error - A value of type 'List<dynamic>' can't be returned from the method 'queryWithMultipleFilters' because it has a return type of 'Future<List<Map<String, dynamic>>>' - lib\core\services\firestore_service.dart:296:14 - return_of_invalid_type
+  error - This literal must be either a map or a set, but the elements don't have enough information for type inference to work - lib\core\services\firestore_service.dart:296:41 - ambiguous_set_or_map_literal_either
+  error - A nullable expression can't be used in a spread - lib\core\services\firestore_service.dart:296:59 - unchecked_use_of_nullable_value
+  error - A value of type 'List<dynamic>' can't be returned from the method 'paginateResults' because it has a return type of 'Future<List<Map<String, dynamic>>>' - lib\core\services\firestore_service.dart:335:14 - return_of_invalid_type
+  error - This literal must be either a map or a set, but the elements don't have enough information for type inference to work - lib\core\services\firestore_service.dart:335:41 - ambiguous_set_or_map_literal_either
+  error - A nullable expression can't be used in a spread - lib\core\services\firestore_service.dart:335:59 - unchecked_use_of_nullable_value
+   info - The imported package 'geocoding' isn't a dependency of the importing package - lib\core\services\location_service.dart:5:8 - depend_on_referenced_packages
+  error - Target of URI doesn't exist: 'package:geocoding/geocoding.dart' - lib\core\services\location_service.dart:5:8 - uri_does_not_exist
+   info - 'desiredAccuracy' is deprecated and shouldn't be used. use settings parameter with AndroidSettings, AppleSettings, WebSettings, or LocationSettings - lib\core\services\location_service.dart:92:9 - deprecated_member_use
+   info - 'timeLimit' is deprecated and shouldn't be used. use settings parameter with AndroidSettings, AppleSettings, WebSettings, or LocationSettings - lib\core\services\location_service.dart:93:9 - deprecated_member_use
+  error - The method 'placemarkFromCoordinates' isn't defined for the type 'LocationService' - lib\core\services\location_service.dart:97:13 - undefined_method
+warning - Dead code - lib\core\services\location_service.dart:106:39 - dead_code
+warning - The left operand can't be null, so the right operand is never executed - lib\core\services\location_service.dart:106:42 - dead_null_aware_expression
+  error - The method 'placemarkFromCoordinates' isn't defined for the type 'LocationService' - lib\core\services\location_service.dart:125:13 - undefined_method
+warning - Dead code - lib\core\services\location_service.dart:134:39 - dead_code
+warning - The left operand can't be null, so the right operand is never executed - lib\core\services\location_service.dart:134:42 - dead_null_aware_expression
+warning - Dead code - lib\core\services\location_service.dart:166:39 - dead_code
+warning - The left operand can't be null, so the right operand is never executed - lib\core\services\location_service.dart:166:42 - dead_null_aware_expression
+  error - The method 'placemarkFromCoordinates' isn't defined for the type 'LocationService' - lib\core\services\location_service.dart:173:32 - undefined_method
+  error - The method 'locationFromAddress' isn't defined for the type 'LocationService' - lib\core\services\location_service.dart:185:31 - undefined_method
+   info - The imported package 'image' isn't a dependency of the importing package - lib\core\services\ml_service.dart:5:8 - depend_on_referenced_packages
+   info - The imported package 'tflite_flutter' isn't a dependency of the importing package - lib\core\services\ml_service.dart:6:8 - depend_on_referenced_packages
+  error - Target of URI doesn't exist: 'package:tflite_flutter/tflite_flutter.dart' - lib\core\services\ml_service.dart:6:8 - uri_does_not_exist
+   info - The imported package 'tflite_flutter_helper' isn't a dependency of the importing package - lib\core\services\ml_service.dart:7:8 - depend_on_referenced_packages
+  error - Target of URI doesn't exist: 'package:tflite_flutter_helper/tflite_flutter_helper.dart' - lib\core\services\ml_service.dart:7:8 - uri_does_not_exist
+  error - Undefined class 'Interpreter' - lib\core\services\ml_service.dart:15:3 - undefined_class
+  error - Undefined class 'Interpreter' - lib\core\services\ml_service.dart:16:3 - undefined_class
+  error - Undefined class 'Interpreter' - lib\core\services\ml_service.dart:17:3 - undefined_class
+  error - Undefined class 'Interpreter' - lib\core\services\ml_service.dart:18:3 - undefined_class
+  error - Undefined class 'Interpreter' - lib\core\services\ml_service.dart:19:3 - undefined_class
+  error - The name 'Interpreter' isn't a type, so it can't be used as a type argument - lib\core\services\ml_service.dart:54:10 - non_type_as_type_argument
+  error - The method 'InterpreterOptions' isn't defined for the type 'MLService' - lib\core\services\ml_service.dart:56:23 - undefined_method
+  error - Undefined name 'Interpreter' - lib\core\services\ml_service.dart:57:20 - undefined_identifier
+  error - The function 'getRed' isn't defined - lib\core\services\ml_service.dart:87:20 - undefined_function
+  error - The function 'getGreen' isn't defined - lib\core\services\ml_service.dart:88:20 - undefined_function
+  error - The function 'getBlue' isn't defined - lib\core\services\ml_service.dart:89:20 - undefined_function
+  error - Undefined class 'TensorImage' - lib\core\services\ml_service.dart:100:3 - undefined_class
+warning - The declaration '_convertImageToTensor' isn't referenced - lib\core\services\ml_service.dart:100:15 - unused_element
+  error - Undefined name 'TensorImage' - lib\core\services\ml_service.dart:101:25 - undefined_identifier
+  error - The method 'ImageProcessorBuilder' isn't defined for the type 'MLService' - lib\core\services\ml_service.dart:102:23 - undefined_method
+  error - The method 'ResizeOp' isn't defined for the type 'MLService' - lib\core\services\ml_service.dart:103:14 - undefined_method
+  error - Undefined name 'ResizeMethod' - lib\core\services\ml_service.dart:103:33 - undefined_identifier
+  error - The method 'NormalizeOp' isn't defined for the type 'MLService' - lib\core\services\ml_service.dart:104:14 - undefined_method
+  error - Undefined class 'Interpreter' - lib\core\services\ml_service.dart:110:38 - undefined_class
+  error - The method 'reshape' isn't defined for the type 'List' - lib\core\services\ml_service.dart:112:49 - undefined_method
+  error - The method 'reshape' isn't defined for the type 'List' - lib\core\services\ml_service.dart:124:66 - undefined_method
+warning - The value of the local variable 'confidence' isn't used - lib\core\services\ml_service.dart:128:13 - unused_local_variable
+  error - The method 'reshape' isn't defined for the type 'List' - lib\core\services\ml_service.dart:146:65 - undefined_method
+  error - The method 'reshape' isn't defined for the type 'List' - lib\core\services\ml_service.dart:168:63 - undefined_method
+  error - The method 'reshape' isn't defined for the type 'List' - lib\core\services\ml_service.dart:188:63 - undefined_method
+  error - The method 'reshape' isn't defined for the type 'List' - lib\core\services\ml_service.dart:208:64 - undefined_method
+   info - The prefix 'tzData' isn't a lower_case_with_underscores identifier - lib\core\services\notification_service.dart:5:51 - library_prefixes
+  error - The named parameter 'onDidReceiveLocalNotification' isn't defined - lib\core\services\notification_service.dart:33:7 - undefined_named_parameter
+  error - The method 'requestPermission' isn't defined for the type 'AndroidFlutterLocalNotificationsPlugin' - lib\core\services\notification_service.dart:58:11 - undefined_method
+  error - The named parameter 'uiLocalNotificationDateInterpretation' isn't defined - lib\core\services\notification_service.dart:173:9 - undefined_named_parameter
+  error - Undefined name 'UILocalNotificationDateInterpretation' - lib\core\services\notification_service.dart:174:9 - undefined_identifier
+  error - Undefined class 'Time' - lib\core\services\notification_service.dart:183:42 - undefined_class
+  error - The named parameter 'uiLocalNotificationDateInterpretation' isn't defined - lib\core\services\notification_service.dart:193:9 - undefined_named_parameter
+  error - Undefined name 'UILocalNotificationDateInterpretation' - lib\core\services\notification_service.dart:194:9 - undefined_identifier
+  error - Undefined class 'Time' - lib\core\services\notification_service.dart:203:51 - undefined_class
+  error - The named parameter 'uiLocalNotificationDateInterpretation' isn't defined - lib\core\services\notification_service.dart:213:9 - undefined_named_parameter
+  error - Undefined name 'UILocalNotificationDateInterpretation' - lib\core\services\notification_service.dart:214:9 - undefined_identifier
+  error - Undefined class 'Time' - lib\core\services\notification_service.dart:287:37 - undefined_class
+  error - Undefined class 'Time' - lib\core\services\notification_service.dart:298:49 - undefined_class
+warning - Unused import: 'dart:typed_data' - lib\core\services\pdf_service.dart:2:8 - unused_import
+   info - 'Table.fromTextArray' is deprecated and shouldn't be used. Use TableHelper.fromTextArray() instead - lib\core\services\pdf_service.dart:137:12 - deprecated_member_use
+  error - The await expression can only be used in an async function - lib\core\services\pdf_service.dart:179:11 - await_in_wrong_context
+   info - Unnecessary use of 'toList' in a spread - lib\core\services\pdf_service.dart:190:80 - unnecessary_to_list_in_spreads
+  error - The await expression can only be used in an async function - lib\core\services\pdf_service.dart:207:23 - await_in_wrong_context
+  error - The await expression can only be used in an async function - lib\core\services\pdf_service.dart:230:11 - await_in_wrong_context
+  error - The await expression can only be used in an async function - lib\core\services\pdf_service.dart:254:23 - await_in_wrong_context
+  error - The await expression can only be used in an async function - lib\core\services\pdf_service.dart:277:11 - await_in_wrong_context
+  error - The await expression can only be used in an async function - lib\core\services\pdf_service.dart:306:11 - await_in_wrong_context
+   info - Unnecessary use of 'toList' in a spread - lib\core\services\pdf_service.dart:335:16 - unnecessary_to_list_in_spreads
+   info - 'Share' is deprecated and shouldn't be used. Use SharePlus instead - lib\core\services\pdf_service.dart:359:13 - deprecated_member_use
+   info - 'shareXFiles' is deprecated and shouldn't be used. Use SharePlus.instance.share() instead - lib\core\services\pdf_service.dart:359:19 - deprecated_member_use
+   info - The imported package 'permission_handler' isn't a dependency of the importing package - lib\core\services\permission_service.dart:2:8 - depend_on_referenced_packages
+  error - Target of URI doesn't exist: 'package:permission_handler/permission_handler.dart' - lib\core\services\permission_service.dart:2:8 - uri_does_not_exist
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:9:26 - undefined_identifier
+   info - Don't use 'BuildContext's across async gaps - lib\core\services\permission_service.dart:10:36 - use_build_context_synchronously
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:10:45 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:14:26 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:22:24 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:22:58 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:22:78 - undefined_identifier
+   info - Don't use 'BuildContext's across async gaps - lib\core\services\permission_service.dart:24:36 - use_build_context_synchronously
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:28:24 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:28:58 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:28:78 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:37:26 - undefined_identifier
+   info - Don't use 'BuildContext's across async gaps - lib\core\services\permission_service.dart:38:36 - use_build_context_synchronously
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:38:45 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:42:26 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:50:26 - undefined_identifier
+   info - Don't use 'BuildContext's across async gaps - lib\core\services\permission_service.dart:51:36 - use_build_context_synchronously
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:51:45 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:55:26 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:63:26 - undefined_identifier
+   info - Don't use 'BuildContext's across async gaps - lib\core\services\permission_service.dart:64:36 - use_build_context_synchronously
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:64:45 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:68:26 - undefined_identifier
+  error - The name 'Permission' isn't a type, so it can't be used as a type argument - lib\core\services\permission_service.dart:75:21 - non_type_as_type_argument
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:77:7 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:78:7 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:79:7 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:80:7 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:81:7 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:81:41 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:81:61 - undefined_identifier
+  error - The name 'Permission' isn't a type, so it can't be used as a type argument - lib\core\services\permission_service.dart:84:15 - non_type_as_type_argument
+  error - The name 'Permission' isn't a type, so it can't be used as a type argument - lib\core\services\permission_service.dart:95:21 - non_type_as_type_argument
+  error - The name 'PermissionStatus' isn't a type, so it can't be used as a type argument - lib\core\services\permission_service.dart:95:33 - non_type_as_type_argument
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:98:7 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:99:7 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:100:7 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:101:7 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:102:7 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:102:41 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:102:61 - undefined_identifier
+  error - The method 'request' isn't defined for the type 'List' - lib\core\services\permission_service.dart:105:39 - undefined_method
+   info - Don't use 'BuildContext's across async gaps - lib\core\services\permission_service.dart:111:39 - use_build_context_synchronously
+  error - Undefined name 'PermissionHandlerPlatform' - lib\core\services\permission_service.dart:122:11 - undefined_identifier
+  error - Undefined class 'Permission' - lib\core\services\permission_service.dart:213:29 - undefined_class
+  error - Undefined class 'PermissionStatus' - lib\core\services\permission_service.dart:213:52 - undefined_class
+  error - Undefined class 'Permission' - lib\core\services\permission_service.dart:238:35 - undefined_class
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:240:12 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:242:12 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:244:12 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:245:12 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:247:12 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:249:12 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:250:12 - undefined_identifier
+  error - Undefined class 'Permission' - lib\core\services\permission_service.dart:260:37 - undefined_class
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:262:12 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:264:12 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:266:12 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:267:12 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:269:12 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:271:12 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\services\permission_service.dart:272:12 - undefined_identifier
+  error - Undefined class 'Permission' - lib\core\services\permission_service.dart:282:43 - undefined_class
+   info - The constant name 'USER_ID_KEY' isn't a lowerCamelCase identifier - lib\core\services\storage_service.dart:23:23 - constant_identifier_names
+   info - The constant name 'USER_EMAIL_KEY' isn't a lowerCamelCase identifier - lib\core\services\storage_service.dart:24:23 - constant_identifier_names
+   info - The constant name 'USER_NAME_KEY' isn't a lowerCamelCase identifier - lib\core\services\storage_service.dart:25:23 - constant_identifier_names
+   info - The constant name 'THEME_MODE_KEY' isn't a lowerCamelCase identifier - lib\core\services\storage_service.dart:26:23 - constant_identifier_names
+   info - The constant name 'LANGUAGE_KEY' isn't a lowerCamelCase identifier - lib\core\services\storage_service.dart:27:23 - constant_identifier_names
+   info - The constant name 'NOTIFICATIONS_ENABLED_KEY' isn't a lowerCamelCase identifier - lib\core\services\storage_service.dart:28:23 - constant_identifier_names
+   info - The constant name 'LAST_ANALYSIS_KEY' isn't a lowerCamelCase identifier - lib\core\services\storage_service.dart:29:23 - constant_identifier_names
+  error - A value of type 'XFile?' can't be returned from the method 'compressImage' because it has a return type of 'Future<File?>' - lib\core\services\storage_service.dart:337:14 - return_of_invalid_type
+   info - The imported package 'geocoding' isn't a dependency of the importing package - lib\core\services\weather_service.dart:5:8 - depend_on_referenced_packages
+  error - Target of URI doesn't exist: 'package:geocoding/geocoding.dart' - lib\core\services\weather_service.dart:5:8 - uri_does_not_exist
+warning - Dead code: This on-catch block won't be executed because 'InvalidType' is a subtype of 'SocketException' and hence will have been caught already - lib\core\services\weather_service.dart:72:7 - dead_code_on_catch_subtype
+  error - The name 'TimeoutException' isn't a type and can't be used in an on-catch clause - lib\core\services\weather_service.dart:72:10 - non_type_in_catch_clause
+warning - Dead code: This on-catch block won't be executed because 'InvalidType' is a subtype of 'SocketException' and hence will have been caught already - lib\core\services\weather_service.dart:95:7 - dead_code_on_catch_subtype
+  error - The name 'TimeoutException' isn't a type and can't be used in an on-catch clause - lib\core\services\weather_service.dart:95:10 - non_type_in_catch_clause
+warning - Dead code: This on-catch block won't be executed because 'InvalidType' is a subtype of 'SocketException' and hence will have been caught already - lib\core\services\weather_service.dart:134:7 - dead_code_on_catch_subtype
+  error - The name 'TimeoutException' isn't a type and can't be used in an on-catch clause - lib\core\services\weather_service.dart:134:10 - non_type_in_catch_clause
+   info - 'desiredAccuracy' is deprecated and shouldn't be used. use settings parameter with AndroidSettings, AppleSettings, WebSettings, or LocationSettings - lib\core\services\weather_service.dart:165:48 - deprecated_member_use
+  error - The method 'placemarkFromCoordinates' isn't defined for the type 'WeatherService' - lib\core\services\weather_service.dart:174:32 - undefined_method
+   info - 'value' is deprecated and shouldn't be used. Use component accessors like .r or .g, or toARGB32 for an explicit conversion - lib\core\utils\extensions.dart:196:17 - deprecated_member_use
+   info - 'WillPopScope' is deprecated and shouldn't be used. Use PopScope instead. The Android predictive back feature will not work with WillPopScope. This feature was deprecated after v3.12.0-1.0.pre - lib\core\utils\helpers.dart:18:23 - deprecated_member_use
+   info - The type of the right operand ('ConnectivityResult') isn't a subtype or a supertype of the left operand ('List<ConnectivityResult>') - lib\core\utils\helpers.dart:201:31 - unrelated_type_equality_checks
+   info - 'Share' is deprecated and shouldn't be used. Use SharePlus instead - lib\core\utils\helpers.dart:242:11 - deprecated_member_use
+   info - 'share' is deprecated and shouldn't be used. Use SharePlus.instance.share() instead - lib\core\utils\helpers.dart:242:17 - deprecated_member_use
+   info - The imported package 'image' isn't a dependency of the importing package - lib\core\utils\image_utils.dart:6:8 - depend_on_referenced_packages
+   info - Don't use 'BuildContext's across async gaps - lib\core\utils\image_utils.dart:44:31 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\core\utils\image_utils.dart:51:31 - use_build_context_synchronously
+  error - The named parameter 'height' is required, but there's no corresponding argument - lib\core\utils\image_utils.dart:116:27 - missing_required_argument
+  error - The named parameter 'width' is required, but there's no corresponding argument - lib\core\utils\image_utils.dart:116:27 - missing_required_argument
+  error - The named parameter 'x' is required, but there's no corresponding argument - lib\core\utils\image_utils.dart:116:27 - missing_required_argument
+  error - The named parameter 'y' is required, but there's no corresponding argument - lib\core\utils\image_utils.dart:116:27 - missing_required_argument
+  error - Too many positional arguments: 1 expected, but 5 found - lib\core\utils\image_utils.dart:118:9 - extra_positional_arguments_could_be_named
+  error - The named parameter 'angle' is required, but there's no corresponding argument - lib\core\utils\image_utils.dart:138:27 - missing_required_argument
+  error - Too many positional arguments: 1 expected, but 2 found - lib\core\utils\image_utils.dart:138:47 - extra_positional_arguments_could_be_named
+   info - The imported package 'permission_handler' isn't a dependency of the importing package - lib\core\utils\permission_utils.dart:2:8 - depend_on_referenced_packages
+  error - Target of URI doesn't exist: 'package:permission_handler/permission_handler.dart' - lib\core\utils\permission_utils.dart:2:8 - uri_does_not_exist
+  error - Undefined name 'Permission' - lib\core\utils\permission_utils.dart:10:26 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\utils\permission_utils.dart:15:26 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\utils\permission_utils.dart:28:26 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\utils\permission_utils.dart:33:26 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\utils\permission_utils.dart:46:26 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\utils\permission_utils.dart:51:26 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\utils\permission_utils.dart:64:26 - undefined_identifier
+  error - Undefined name 'Permission' - lib\core\utils\permission_utils.dart:69:26 - undefined_identifier
+  error - The name 'Permission' isn't a type, so it can't be used as a type argument - lib\core\utils\permission_utils.dart:77:21 - non_type_as_type_argument
+  error - The name 'PermissionStatus' isn't a type, so it can't be used as a type argument - lib\core\utils\permission_utils.dart:77:33 - non_type_as_type_argument
+  error - The name 'Permission' isn't a type, so it can't be used as a type argument - lib\core\utils\permission_utils.dart:78:12 - non_type_as_type_argument
+  error - The method 'request' isn't defined for the type 'List' - lib\core\utils\permission_utils.dart:79:30 - undefined_method
+  error - The name 'Permission' isn't a type, so it can't be used as a type argument - lib\core\utils\permission_utils.dart:82:21 - non_type_as_type_argument
+  error - The name 'Permission' isn't a type, so it can't be used as a type argument - lib\core\utils\permission_utils.dart:83:12 - non_type_as_type_argument
+  error - The name 'Permission' isn't a type, so it can't be used as a type argument - lib\core\utils\permission_utils.dart:84:15 - non_type_as_type_argument
+  error - Undefined name 'PermissionHandlerPlatform' - lib\core\utils\permission_utils.dart:97:11 - undefined_identifier
+  error - Undefined class 'PermissionStatus' - lib\core\utils\permission_utils.dart:129:7 - undefined_class
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\analysis_card.dart:15:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\analysis_card.dart:67:35 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\analysis_card.dart:88:38 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\analysis_card.dart:89:38 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\analysis_card.dart:129:44 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\analysis_card.dart:159:47 - deprecated_member_use
+warning - The declaration '<unnamed>' isn't referenced - lib\core\widgets\animated_card.dart:1:1 - unused_element
+  error - Target of URI doesn't exist: 'widgets/custom_appbar.dart' - lib\core\widgets\animated_card.dart:2:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: 'widgets/custom_textfield.dart' - lib\core\widgets\animated_card.dart:3:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: 'widgets/custom_button.dart' - lib\core\widgets\animated_card.dart:4:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: 'widgets/loading_widget.dart' - lib\core\widgets\animated_card.dart:5:8 - uri_does_not_exist
+   info - Constructors for public widgets should have a named 'key' parameter - lib\core\widgets\animated_card.dart:7:7 - use_key_in_widget_constructors
+   info - Invalid use of a private type in a public API - lib\core\widgets\animated_card.dart:9:3 - library_private_types_in_public_api
+  error - The method 'CustomAppBar' isn't defined for the type '_LoginScreenState' - lib\core\widgets\animated_card.dart:20:15 - undefined_method
+  error - The method 'LoadingWidget' isn't defined for the type '_LoginScreenState' - lib\core\widgets\animated_card.dart:28:13 - undefined_method
+  error - The method 'CustomTextField' isn't defined for the type '_LoginScreenState' - lib\core\widgets\animated_card.dart:37:13 - undefined_method
+  error - The method 'CustomTextField' isn't defined for the type '_LoginScreenState' - lib\core\widgets\animated_card.dart:45:13 - undefined_method
+  error - The method 'CustomButton' isn't defined for the type '_LoginScreenState' - lib\core\widgets\animated_card.dart:53:13 - undefined_method
+   info - An uninitialized variable should have an explicit type annotation - lib\core\widgets\animated_card.dart:71:1 - prefer_typing_uninitialized_variables
+   info - Missing type annotation - lib\core\widgets\animated_card.dart:71:1 - strict_top_level_inference
+   info - The variable name 'Example' isn't a lowerCamelCase identifier - lib\core\widgets\animated_card.dart:71:1 - non_constant_identifier_names
+  error - Expected to find ';' - lib\core\widgets\animated_card.dart:71:1 - expected_token
+  error - Variables must be declared using the keywords 'const', 'final', 'var' or a type name - lib\core\widgets\animated_card.dart:71:1 - missing_const_final_var_or_type
+  error - Expected a method, getter, setter or operator declaration - lib\core\widgets\animated_card.dart:71:9 - expected_executable
+  error - Expected a method, getter, setter or operator declaration - lib\core\widgets\animated_card.dart:71:10 - expected_executable
+   info - An uninitialized variable should have an explicit type annotation - lib\core\widgets\animated_card.dart:71:12 - prefer_typing_uninitialized_variables
+   info - Missing type annotation - lib\core\widgets\animated_card.dart:71:12 - strict_top_level_inference
+   info - The variable name 'Dashboard' isn't a lowerCamelCase identifier - lib\core\widgets\animated_card.dart:71:12 - non_constant_identifier_names
+  error - Expected to find ';' - lib\core\widgets\animated_card.dart:71:12 - expected_token
+  error - Variables must be declared using the keywords 'const', 'final', 'var' or a type name - lib\core\widgets\animated_card.dart:71:12 - missing_const_final_var_or_type
+   info - An uninitialized variable should have an explicit type annotation - lib\core\widgets\animated_card.dart:71:22 - prefer_typing_uninitialized_variables
+   info - Missing type annotation - lib\core\widgets\animated_card.dart:71:22 - strict_top_level_inference
+  error - 'with' can't be used as an identifier because it's a keyword - lib\core\widgets\animated_card.dart:71:22 - expected_identifier_but_got_keyword
+  error - Expected to find ';' - lib\core\widgets\animated_card.dart:71:22 - expected_token
+  error - Variables must be declared using the keywords 'const', 'final', 'var' or a type name - lib\core\widgets\animated_card.dart:71:22 - missing_const_final_var_or_type
+  error - Undefined class 'Info' - lib\core\widgets\animated_card.dart:71:27 - undefined_class
+   info - The variable name 'Cards' isn't a lowerCamelCase identifier - lib\core\widgets\animated_card.dart:71:32 - non_constant_identifier_names
+  error - Expected to find ';' - lib\core\widgets\animated_card.dart:71:32 - expected_token
+  error - Directives must appear before any declarations - lib\core\widgets\animated_card.dart:72:1 - directive_after_declaration
+  error - Directives must appear before any declarations - lib\core\widgets\animated_card.dart:73:1 - directive_after_declaration
+  error - Target of URI doesn't exist: 'widgets/custom_appbar.dart' - lib\core\widgets\animated_card.dart:73:8 - uri_does_not_exist
+  error - Directives must appear before any declarations - lib\core\widgets\animated_card.dart:74:1 - directive_after_declaration
+  error - Target of URI doesn't exist: 'widgets/info_card.dart' - lib\core\widgets\animated_card.dart:74:8 - uri_does_not_exist
+  error - Directives must appear before any declarations - lib\core\widgets\animated_card.dart:75:1 - directive_after_declaration
+  error - Target of URI doesn't exist: 'widgets/health_card.dart' - lib\core\widgets\animated_card.dart:75:8 - uri_does_not_exist
+   info - Constructors for public widgets should have a named 'key' parameter - lib\core\widgets\animated_card.dart:77:7 - use_key_in_widget_constructors
+  error - The method 'CustomAppBar' isn't defined for the type 'DashboardScreen' - lib\core\widgets\animated_card.dart:81:15 - undefined_method
+  error - The method 'HealthCard' isn't defined for the type 'DashboardScreen' - lib\core\widgets\animated_card.dart:93:13 - undefined_method
+  error - The method 'InfoCard' isn't defined for the type 'DashboardScreen' - lib\core\widgets\animated_card.dart:111:17 - undefined_method
+  error - Undefined name 'Trend' - lib\core\widgets\animated_card.dart:117:26 - undefined_identifier
+  error - The method 'InfoCard' isn't defined for the type 'DashboardScreen' - lib\core\widgets\animated_card.dart:120:17 - undefined_method
+  error - Undefined name 'Trend' - lib\core\widgets\animated_card.dart:126:26 - undefined_identifier
+  error - The method 'InfoCard' isn't defined for the type 'DashboardScreen' - lib\core\widgets\animated_card.dart:129:17 - undefined_method
+  error - Undefined name 'Trend' - lib\core\widgets\animated_card.dart:135:26 - undefined_identifier
+  error - The method 'InfoCard' isn't defined for the type 'DashboardScreen' - lib\core\widgets\animated_card.dart:137:17 - undefined_method
+  error - Undefined name 'Trend' - lib\core\widgets\animated_card.dart:143:26 - undefined_identifier
+   info - An uninitialized variable should have an explicit type annotation - lib\core\widgets\animated_card.dart:155:1 - prefer_typing_uninitialized_variables
+   info - Missing type annotation - lib\core\widgets\animated_card.dart:155:1 - strict_top_level_inference
+   info - The variable name 'All' isn't a lowerCamelCase identifier - lib\core\widgets\animated_card.dart:155:1 - non_constant_identifier_names
+  error - Expected to find ';' - lib\core\widgets\animated_card.dart:155:1 - expected_token
+  error - Variables must be declared using the keywords 'const', 'final', 'var' or a type name - lib\core\widgets\animated_card.dart:155:1 - missing_const_final_var_or_type
+  error - Expected a method, getter, setter or operator declaration - lib\core\widgets\animated_card.dart:155:5 - expected_executable
+  error - Undefined class 'widget' - lib\core\widgets\animated_card.dart:155:8 - undefined_class
+  error - Expected to find ';' - lib\core\widgets\animated_card.dart:155:15 - expected_token
+  error - Undefined class 'are' - lib\core\widgets\animated_card.dart:155:21 - undefined_class
+  error - Expected to find ';' - lib\core\widgets\animated_card.dart:155:25 - expected_token
+  error - Expected a method, getter, setter or operator declaration - lib\core\widgets\animated_card.dart:155:35 - expected_executable
+   info - An uninitialized variable should have an explicit type annotation - lib\core\widgets\animated_card.dart:155:36 - prefer_typing_uninitialized_variables
+   info - Missing type annotation - lib\core\widgets\animated_card.dart:155:36 - strict_top_level_inference
+  error - Variables must be declared using the keywords 'const', 'final', 'var' or a type name - lib\core\widgets\animated_card.dart:155:36 - missing_const_final_var_or_type
+   info - An uninitialized variable should have an explicit type annotation - lib\core\widgets\animated_card.dart:155:43 - prefer_typing_uninitialized_variables
+   info - Missing type annotation - lib\core\widgets\animated_card.dart:155:43 - strict_top_level_inference
+  error - Expected to find ';' - lib\core\widgets\animated_card.dart:155:43 - expected_token
+   info - An uninitialized variable should have an explicit type annotation - lib\core\widgets\animated_card.dart:155:49 - prefer_typing_uninitialized_variables
+   info - Missing type annotation - lib\core\widgets\animated_card.dart:155:49 - strict_top_level_inference
+  error - Variables must be declared using the keywords 'const', 'final', 'var' or a type name - lib\core\widgets\animated_card.dart:155:49 - missing_const_final_var_or_type
+   info - An uninitialized variable should have an explicit type annotation - lib\core\widgets\animated_card.dart:155:61 - prefer_typing_uninitialized_variables
+   info - Missing type annotation - lib\core\widgets\animated_card.dart:155:61 - strict_top_level_inference
+  error - Expected to find ';' - lib\core\widgets\animated_card.dart:155:61 - expected_token
+  error - ready isn't a type - lib\core\widgets\animated_card.dart:155:65 - not_a_type
+  error - Expected to find ';' - lib\core\widgets\animated_card.dart:155:71 - expected_token
+   info - An uninitialized variable should have an explicit type annotation - lib\core\widgets\animated_card.dart:155:74 - prefer_typing_uninitialized_variables
+   info - Missing type annotation - lib\core\widgets\animated_card.dart:155:74 - strict_top_level_inference
+  error - Expected to find ';' - lib\core\widgets\animated_card.dart:155:74 - expected_token
+  error - Variables must be declared using the keywords 'const', 'final', 'var' or a type name - lib\core\widgets\animated_card.dart:155:74 - missing_const_final_var_or_type
+   info - An uninitialized variable should have an explicit type annotation - lib\core\widgets\animated_card.dart:155:78 - prefer_typing_uninitialized_variables
+   info - Missing type annotation - lib\core\widgets\animated_card.dart:155:78 - strict_top_level_inference
+  error - 'in' can't be used as an identifier because it's a keyword - lib\core\widgets\animated_card.dart:155:78 - expected_identifier_but_got_keyword
+  error - Expected to find ';' - lib\core\widgets\animated_card.dart:155:78 - expected_token
+  error - Variables must be declared using the keywords 'const', 'final', 'var' or a type name - lib\core\widgets\animated_card.dart:155:78 - missing_const_final_var_or_type
+  error - Undefined class 'your' - lib\core\widgets\animated_card.dart:155:81 - undefined_class
+   info - The variable name 'Crop' isn't a lowerCamelCase identifier - lib\core\widgets\animated_card.dart:155:86 - non_constant_identifier_names
+  error - Expected to find ';' - lib\core\widgets\animated_card.dart:155:86 - expected_token
+  error - Undefined class 'Analyzer' - lib\core\widgets\animated_card.dart:155:91 - undefined_class
+  error - Expected to find ';' - lib\core\widgets\animated_card.dart:155:100 - expected_token
+  error - Expected a method, getter, setter or operator declaration - lib\core\widgets\animated_card.dart:155:103 - expected_executable
+  error - Illegal character '55356' - lib\core\widgets\animated_card.dart:155:105 - illegal_character
+  error - Undefined class '🌾📱🚀' - lib\core\widgets\animated_card.dart:155:105 - undefined_class
+  error - Illegal character '57150' - lib\core\widgets\animated_card.dart:155:106 - illegal_character
+  error - Illegal character '55357' - lib\core\widgets\animated_card.dart:155:107 - illegal_character
+  error - Illegal character '56561' - lib\core\widgets\animated_card.dart:155:108 - illegal_character
+  error - Illegal character '55357' - lib\core\widgets\animated_card.dart:155:109 - illegal_character
+  error - Illegal character '56960' - lib\core\widgets\animated_card.dart:155:110 - illegal_character
+   info - The variable name 'Need' isn't a lowerCamelCase identifier - lib\core\widgets\animated_card.dart:157:1 - non_constant_identifier_names
+  error - Expected to find ';' - lib\core\widgets\animated_card.dart:157:1 - expected_token
+   info - An uninitialized variable should have an explicit type annotation - lib\core\widgets\animated_card.dart:157:6 - prefer_typing_uninitialized_variables
+   info - Missing type annotation - lib\core\widgets\animated_card.dart:157:6 - strict_top_level_inference
+  error - Expected to find ';' - lib\core\widgets\animated_card.dart:157:6 - expected_token
+  error - Variables must be declared using the keywords 'const', 'final', 'var' or a type name - lib\core\widgets\animated_card.dart:157:6 - missing_const_final_var_or_type
+   info - An uninitialized variable should have an explicit type annotation - lib\core\widgets\animated_card.dart:157:15 - prefer_typing_uninitialized_variables
+   info - Missing type annotation - lib\core\widgets\animated_card.dart:157:15 - strict_top_level_inference
+  error - 'else' can't be used as an identifier because it's a keyword - lib\core\widgets\animated_card.dart:157:15 - expected_identifier_but_got_keyword
+  error - Expected to find ';' - lib\core\widgets\animated_card.dart:157:15 - expected_token
+  error - Variables must be declared using the keywords 'const', 'final', 'var' or a type name - lib\core\widgets\animated_card.dart:157:15 - missing_const_final_var_or_type
+  error - Expected a method, getter, setter or operator declaration - lib\core\widgets\animated_card.dart:157:19 - expected_executable
+  error - Expected to find ';' - lib\core\widgets\animated_card.dart:157:21 - expected_token
+  error - Illegal character '55356' - lib\core\widgets\animated_card.dart:157:21 - illegal_character
+  error - Undefined class '🌱' - lib\core\widgets\animated_card.dart:157:21 - undefined_class
+  error - Illegal character '57137' - lib\core\widgets\animated_card.dart:157:22 - illegal_character
+  error - Directives must appear before any declarations - lib\core\widgets\animated_card.dart:160:1 - directive_after_declaration
+  error - Expected an identifier - lib\core\widgets\animated_card.dart:160:1 - missing_identifier
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\animated_card.dart:210:9 - use_super_parameters
+warning - The value of the field '_isPressed' isn't used - lib\core\widgets\animated_card.dart:235:8 - unused_field
+  error - Undefined class 'PointerEnterEvent' - lib\core\widgets\animated_card.dart:285:26 - undefined_class
+  error - Undefined class 'PointerExitEvent' - lib\core\widgets\animated_card.dart:291:25 - undefined_class
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\animated_card.dart:302:44 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\animated_card.dart:344:52 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\animated_card.dart:346:52 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\app_card.dart:17:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\app_card.dart:39:68 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\app_card.dart:69:56 - deprecated_member_use
+   info - The imported package 'charts_flutter' isn't a dependency of the importing package - lib\core\widgets\chart_card.dart:2:8 - depend_on_referenced_packages
+  error - Target of URI doesn't exist: 'package:charts_flutter/flutter.dart' - lib\core\widgets\chart_card.dart:2:8 - uri_does_not_exist
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\chart_card.dart:21:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\chart_card.dart:47:35 - deprecated_member_use
+   info - The imported package 'url_launcher' isn't a dependency of the importing package - lib\core\widgets\chatbot_bubble.dart:3:8 - depend_on_referenced_packages
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\chatbot_bubble.dart:18:9 - use_super_parameters
+   info - Unnecessary use of multiple underscores - lib\core\widgets\chatbot_bubble.dart:137:31 - unnecessary_underscores
+   info - Unnecessary use of multiple underscores - lib\core\widgets\chatbot_bubble.dart:137:35 - unnecessary_underscores
+  error - Undefined name 'Clipboard' - lib\core\widgets\chatbot_bubble.dart:159:13 - undefined_identifier
+  error - The method 'ClipboardData' isn't defined for the type 'ChatBubble' - lib\core\widgets\chatbot_bubble.dart:159:31 - undefined_method
+  error - The method 'TapGestureRecognizer' isn't defined for the type 'ChatBubble' - lib\core\widgets\chatbot_bubble.dart:221:22 - undefined_method
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\custom_appbar.dart:58:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\custom_appbar.dart:96:39 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\custom_appbar.dart:180:35 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\custom_button.dart:69:9 - use_super_parameters
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\custom_textfield.dart:91:9 - use_super_parameters
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\disease_card.dart:16:9 - use_super_parameters
+   info - Unnecessary use of multiple underscores - lib\core\widgets\disease_card.dart:98:35 - unnecessary_underscores
+   info - Unnecessary use of multiple underscores - lib\core\widgets\disease_card.dart:98:39 - unnecessary_underscores
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\disease_card.dart:112:28 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\disease_card.dart:135:32 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\disease_card.dart:176:36 - deprecated_member_use
+warning - The value of the local variable 'color' isn't used - lib\core\widgets\disease_card.dart:241:11 - unused_local_variable
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\disease_card.dart:288:44 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\empty_widgets.dart:13:9 - use_super_parameters
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\empty_widgets.dart:122:9 - use_super_parameters
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\empty_widgets.dart:140:9 - use_super_parameters
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\empty_widgets.dart:158:9 - use_super_parameters
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\empty_widgets.dart:176:9 - use_super_parameters
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\empty_widgets.dart:194:9 - use_super_parameters
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\empty_widgets.dart:212:9 - use_super_parameters
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\empty_widgets.dart:230:9 - use_super_parameters
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\health_card.dart:49:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\health_card.dart:148:41 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\health_card.dart:162:34 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\health_card.dart:241:45 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\info_card.dart:70:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\info_card.dart:181:41 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\loading_widget.dart:45:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\loading_widget.dart:147:50 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\loading_widget.dart:164:9 - use_super_parameters
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\stat_card.dart:19:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\stat_card.dart:66:26 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\stat_card.dart:167:32 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\core\widgets\stat_card.dart:168:35 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\core\widgets\weather_card.dart:18:9 - use_super_parameters
+  error - Target of URI doesn't exist: '../../../core/providers/analysis_provider.dart' - lib\features\analysis\analysis_screen.dart:5:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: '../../reports/screens/reports_screen.dart' - lib\features\analysis\analysis_screen.dart:6:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: '../../history/screens/history_screen.dart' - lib\features\analysis\analysis_screen.dart:7:8 - uri_does_not_exist
+   info - Parameter 'key' could be a super parameter - lib\features\analysis\analysis_screen.dart:11:9 - use_super_parameters
+  error - The name 'AnalysisProvider' isn't a type, so it can't be used as a type argument - lib\features\analysis\analysis_screen.dart:34:34 - non_type_as_type_argument
+   info - Don't use 'BuildContext's across async gaps - lib\features\analysis\analysis_screen.dart:46:28 - use_build_context_synchronously
+  error - The name 'AnalysisProvider' isn't a type, so it can't be used as a type argument - lib\features\analysis\analysis_screen.dart:64:34 - non_type_as_type_argument
+   info - Don't use 'BuildContext's across async gaps - lib\features\analysis\analysis_screen.dart:66:26 - use_build_context_synchronously
+  error - The name 'AnalysisProvider' isn't a type, so it can't be used as a type argument - lib\features\analysis\analysis_screen.dart:72:34 - non_type_as_type_argument
+  error - The name 'AnalysisProvider' isn't a type, so it can't be used as a type argument - lib\features\analysis\analysis_screen.dart:77:34 - non_type_as_type_argument
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\analysis\analysis_screen.dart:92:54 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\analysis\analysis_screen.dart:104:54 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\analysis\analysis_screen.dart:226:49 - deprecated_member_use
+  error - The name 'HistoryScreen' isn't a class - lib\features\analysis\analysis_screen.dart:299:77 - creation_with_non_type
+   info - The imported package 'charts_flutter' isn't a dependency of the importing package - lib\features\analysis\analytics_dashboard.dart:3:8 - depend_on_referenced_packages
+  error - Target of URI doesn't exist: 'package:charts_flutter/flutter.dart' - lib\features\analysis\analytics_dashboard.dart:3:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: '../../../core/providers/analytics_provider.dart' - lib\features\analysis\analytics_dashboard.dart:4:8 - uri_does_not_exist
+warning - Unused import: 'package:intl/intl.dart' - lib\features\analysis\analytics_dashboard.dart:5:8 - unused_import
+   info - Parameter 'key' could be a super parameter - lib\features\analysis\analytics_dashboard.dart:8:9 - use_super_parameters
+  error - The name 'AnalyticsProvider' isn't a type, so it can't be used as a type argument - lib\features\analysis\analytics_dashboard.dart:27:34 - non_type_as_type_argument
+  error - The name 'AnalyticsProvider' isn't a type, so it can't be used as a type argument - lib\features\analysis\analytics_dashboard.dart:48:34 - non_type_as_type_argument
+   info - Don't use 'BuildContext's across async gaps - lib\features\analysis\analytics_dashboard.dart:50:26 - use_build_context_synchronously
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\analysis\analytics_dashboard.dart:65:30 - deprecated_member_use
+  error - The name 'AnalyticsProvider' isn't a type, so it can't be used as a type argument - lib\features\analysis\analytics_dashboard.dart:167:35 - non_type_as_type_argument
+  error - Target of URI doesn't exist: '../../../core/providers/gallery_provider.dart' - lib\features\analysis\gallery_screen.dart:5:8 - uri_does_not_exist
+   info - Parameter 'key' could be a super parameter - lib\features\analysis\gallery_screen.dart:8:9 - use_super_parameters
+   info - The private field _selectedIds could be 'final' - lib\features\analysis\gallery_screen.dart:17:16 - prefer_final_fields
+warning - The value of the field '_searchQuery' isn't used - lib\features\analysis\gallery_screen.dart:18:10 - unused_field
+warning - The value of the field '_filter' isn't used - lib\features\analysis\gallery_screen.dart:19:10 - unused_field
+warning - The value of the field '_sort' isn't used - lib\features\analysis\gallery_screen.dart:20:10 - unused_field
+  error - The name 'GalleryProvider' isn't a type, so it can't be used as a type argument - lib\features\analysis\gallery_screen.dart:31:34 - non_type_as_type_argument
+  error - The name 'GalleryProvider' isn't a type, so it can't be used as a type argument - lib\features\analysis\gallery_screen.dart:38:17 - non_type_as_type_argument
+  error - The name 'GalleryProvider' isn't a type, so it can't be used as a type argument - lib\features\analysis\gallery_screen.dart:43:17 - non_type_as_type_argument
+  error - The name 'GalleryProvider' isn't a type, so it can't be used as a type argument - lib\features\analysis\gallery_screen.dart:48:17 - non_type_as_type_argument
+  error - The name 'GalleryProvider' isn't a type, so it can't be used as a type argument - lib\features\analysis\gallery_screen.dart:63:34 - non_type_as_type_argument
+   info - Don't use 'BuildContext's across async gaps - lib\features\analysis\gallery_screen.dart:69:26 - use_build_context_synchronously
+  error - The name 'GalleryProvider' isn't a type, so it can't be used as a type argument - lib\features\analysis\gallery_screen.dart:75:34 - non_type_as_type_argument
+  error - The name 'GalleryProvider' isn't a type, so it can't be used as a type argument - lib\features\analysis\gallery_screen.dart:80:34 - non_type_as_type_argument
+   info - Don't use 'BuildContext's across async gaps - lib\features\analysis\gallery_screen.dart:82:26 - use_build_context_synchronously
+  error - The name 'GalleryProvider' isn't a type, so it can't be used as a type argument - lib\features\analysis\gallery_screen.dart:88:34 - non_type_as_type_argument
+  error - The name 'GalleryProvider' isn't a type, so it can't be used as a type argument - lib\features\analysis\gallery_screen.dart:120:36 - non_type_as_type_argument
+   info - Don't use 'BuildContext's across async gaps - lib\features\analysis\gallery_screen.dart:120:53 - use_build_context_synchronously
+  error - Undefined class 'GalleryImage' - lib\features\analysis\gallery_screen.dart:132:26 - undefined_class
+  error - The name 'GalleryProvider' isn't a type, so it can't be used as a type argument - lib\features\analysis\gallery_screen.dart:220:33 - non_type_as_type_argument
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\analysis\screens\comparison_screen.dart:206:42 - deprecated_member_use
+  error - Target of URI doesn't exist: '../../../core/providers/auth_provider.dart' - lib\features\authentication\screens\change_password_screen.dart:3:8 - uri_does_not_exist
+  error - The name 'AuthProvider' isn't a type, so it can't be used as a type argument - lib\features\authentication\screens\change_password_screen.dart:73:40 - non_type_as_type_argument
+  error - The class 'GoogleSignIn' doesn't have an unnamed constructor - lib\features\authentication\screens\login_screen.dart:17:25 - new_with_undefined_constructor_default
+  error - The method 'signIn' isn't defined for the type 'GoogleSignIn' - lib\features\authentication\screens\login_screen.dart:72:67 - undefined_method
+   info - Uses 'await' on an instance of 'GoogleSignInAuthentication', which is not a subtype of 'Future' - lib\features\authentication\screens\login_screen.dart:80:53 - await_only_futures
+  error - The getter 'accessToken' isn't defined for the type 'GoogleSignInAuthentication' - lib\features\authentication\screens\login_screen.dart:83:33 - undefined_getter
+   info - The imported package 'font_awesome_flutter' isn't a dependency of the importing package - lib\features\authentication\screens\register_screen.dart:3:8 - depend_on_referenced_packages
+  error - Target of URI doesn't exist: 'package:font_awesome_flutter/font_awesome_flutter.dart' - lib\features\authentication\screens\register_screen.dart:3:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: '../../../core/providers/auth_provider.dart' - lib\features\authentication\screens\register_screen.dart:4:8 - uri_does_not_exist
+   info - Parameter 'key' could be a super parameter - lib\features\authentication\screens\register_screen.dart:10:9 - use_super_parameters
+  error - The name 'AuthProvider' isn't a type, so it can't be used as a type argument - lib\features\authentication\screens\register_screen.dart:75:40 - non_type_as_type_argument
+   info - Don't use 'BuildContext's across async gaps - lib\features\authentication\screens\register_screen.dart:92:28 - use_build_context_synchronously
+  error - The name 'AuthProvider' isn't a type, so it can't be used as a type argument - lib\features\authentication\screens\register_screen.dart:103:40 - non_type_as_type_argument
+   info - Don't use 'BuildContext's across async gaps - lib\features\authentication\screens\register_screen.dart:112:28 - use_build_context_synchronously
+  error - The name 'AuthProvider' isn't a type, so it can't be used as a type argument - lib\features\authentication\screens\register_screen.dart:123:40 - non_type_as_type_argument
+   info - Don't use 'BuildContext's across async gaps - lib\features\authentication\screens\register_screen.dart:132:28 - use_build_context_synchronously
+warning - The value of the local variable 'theme' isn't used - lib\features\authentication\screens\register_screen.dart:181:11 - unused_local_variable
+  error - The name 'FaIcon' isn't a class - lib\features\authentication\screens\register_screen.dart:362:41 - creation_with_non_type
+  error - Undefined name 'FontAwesomeIcons' - lib\features\authentication\screens\register_screen.dart:362:48 - undefined_identifier
+  error - The name 'FaIcon' isn't a class - lib\features\authentication\screens\register_screen.dart:367:41 - creation_with_non_type
+  error - Undefined name 'FontAwesomeIcons' - lib\features\authentication\screens\register_screen.dart:367:48 - undefined_identifier
+   info - Don't use 'BuildContext's across async gaps - lib\features\camera\screens\drone_camera_screen.dart:104:28 - use_build_context_synchronously
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\camera\screens\drone_camera_screen.dart:217:47 - deprecated_member_use
+  error - The method 'getBackgroundColor' isn't defined for the type 'AppColors' - lib\features\camera\screens\upload_image_screen.dart:88:34 - undefined_method
+   info - Don't use 'BuildContext's across async gaps - lib\features\chatbot\screens\chatbot_screen.dart:65:28 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\chatbot\screens\chatbot_screen.dart:198:28 - use_build_context_synchronously
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\chatbot\screens\chatbot_screen.dart:234:45 - deprecated_member_use
+  error - The method 'getBackgroundColor' isn't defined for the type 'AppColors' - lib\features\chatbot\screens\chatbot_screen.dart:357:34 - undefined_method
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\dashboard\screens\dashboard_screen.dart:77:34 - deprecated_member_use
+  error - The method 'getBackgroundColor' isn't defined for the type 'AppColors' - lib\features\dashboard\screens\dashboard_screen.dart:142:34 - undefined_method
+   info - The imported package 'url_launcher' isn't a dependency of the importing package - lib\features\help\screens\help_screen.dart:2:8 - depend_on_referenced_packages
+   info - Parameter 'key' could be a super parameter - lib\features\help\screens\help_screen.dart:6:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\help\screens\help_screen.dart:79:54 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\help\screens\help_screen.dart:105:54 - deprecated_member_use
+   info - Don't use 'BuildContext's across async gaps - lib\features\history\screens\history_screen.dart:150:30 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\history\screens\history_screen.dart:157:30 - use_build_context_synchronously
+  error - The method 'getBackgroundColor' isn't defined for the type 'AppColors' - lib\features\history\screens\history_screen.dart:329:34 - undefined_method
+  error - Target of URI doesn't exist: '../../../core/providers/auth_provider.dart' - lib\features\home\screens\home_screen.dart:6:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: '../../../core/providers/weather_provider.dart' - lib\features\home\screens\home_screen.dart:7:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: '../../../core/providers/history_provider.dart' - lib\features\home\screens\home_screen.dart:8:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: '../../analysis/screens/analysis_screen.dart' - lib\features\home\screens\home_screen.dart:9:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: '../../profile/screens/account_screen.dart' - lib\features\home\screens\home_screen.dart:12:8 - uri_does_not_exist
+   info - Parameter 'key' could be a super parameter - lib\features\home\screens\home_screen.dart:17:9 - use_super_parameters
+  error - The name 'WeatherProvider' isn't a type, so it can't be used as a type argument - lib\features\home\screens\home_screen.dart:35:23 - non_type_as_type_argument
+  error - The name 'HistoryProvider' isn't a type, so it can't be used as a type argument - lib\features\home\screens\home_screen.dart:36:23 - non_type_as_type_argument
+   info - Don't use 'BuildContext's across async gaps - lib\features\home\screens\home_screen.dart:36:40 - use_build_context_synchronously
+  error - The method 'AnalysisScreen' isn't defined for the type '_HomeScreenState' - lib\features\home\screens\home_screen.dart:63:41 - undefined_method
+  error - The name 'AccountScreen' isn't a class - lib\features\home\screens\home_screen.dart:76:69 - creation_with_non_type
+  error - The name 'AuthProvider' isn't a type, so it can't be used as a type argument - lib\features\home\screens\home_screen.dart:98:38 - non_type_as_type_argument
+  error - The name 'WeatherProvider' isn't a type, so it can't be used as a type argument - lib\features\home\screens\home_screen.dart:99:41 - non_type_as_type_argument
+  error - The name 'HistoryProvider' isn't a type, so it can't be used as a type argument - lib\features\home\screens\home_screen.dart:100:41 - non_type_as_type_argument
+warning - The value of the local variable 'weather' isn't used - lib\features\home\screens\home_screen.dart:102:11 - unused_local_variable
+   info - Missing type annotation - lib\features\home\screens\home_screen.dart:161:23 - strict_top_level_inference
+  error - The name 'AuthProvider' isn't a type, so it can't be used as a type argument - lib\features\home\screens\home_screen.dart:193:25 - non_type_as_type_argument
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\home\screens\home_screen.dart:261:24 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\home\screens\home_screen.dart:263:43 - deprecated_member_use
+  error - Undefined class 'WeatherProvider' - lib\features\home\screens\home_screen.dart:279:30 - undefined_class
+  error - Undefined class 'HistoryProvider' - lib\features\home\screens\home_screen.dart:341:34 - undefined_class
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\home\screens\home_screen.dart:433:46 - deprecated_member_use
+  error - Target of URI doesn't exist: '../../../core/providers/auth_provider.dart' - lib\features\profile\account_screen.dart:6:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: '../../../core/providers/profile_provider.dart' - lib\features\profile\account_screen.dart:7:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: '../screens/edit_profile_screen.dart' - lib\features\profile\account_screen.dart:8:8 - uri_does_not_exist
+   info - Parameter 'key' could be a super parameter - lib\features\profile\account_screen.dart:11:9 - use_super_parameters
+  error - The name 'ProfileProvider' isn't a type, so it can't be used as a type argument - lib\features\profile\account_screen.dart:51:21 - non_type_as_type_argument
+   info - Don't use 'BuildContext's across async gaps - lib\features\profile\account_screen.dart:51:38 - use_build_context_synchronously
+  error - The name 'AuthProvider' isn't a type, so it can't be used as a type argument - lib\features\profile\account_screen.dart:91:29 - non_type_as_type_argument
+  error - The name 'AuthProvider' isn't a type, so it can't be used as a type argument - lib\features\profile\account_screen.dart:121:27 - non_type_as_type_argument
+  error - The name 'AuthProvider' isn't a type, so it can't be used as a type argument - lib\features\profile\account_screen.dart:143:27 - non_type_as_type_argument
+  error - The name 'ProfileProvider' isn't a type, so it can't be used as a type argument - lib\features\profile\account_screen.dart:159:41 - non_type_as_type_argument
+warning - The value of the local variable 'theme' isn't used - lib\features\profile\account_screen.dart:161:11 - unused_local_variable
+  error - The name 'EditProfileScreen' isn't a class - lib\features\profile\account_screen.dart:172:57 - creation_with_non_type
+  error - The name 'EditProfileScreen' isn't a class - lib\features\profile\account_screen.dart:305:63 - creation_with_non_type
+  error - Target of URI doesn't exist: '../../../core/providers/profile_provider.dart' - lib\features\profile\edit_profile_screen.dart:6:8 - uri_does_not_exist
+   info - Parameter 'key' could be a super parameter - lib\features\profile\edit_profile_screen.dart:9:9 - use_super_parameters
+  error - The name 'ProfileProvider' isn't a type, so it can't be used as a type argument - lib\features\profile\edit_profile_screen.dart:42:33 - non_type_as_type_argument
+  error - The name 'ProfileProvider' isn't a type, so it can't be used as a type argument - lib\features\profile\edit_profile_screen.dart:108:43 - non_type_as_type_argument
+   info - Don't use 'BuildContext's across async gaps - lib\features\profile\edit_profile_screen.dart:128:28 - use_build_context_synchronously
+   info - 'WillPopScope' is deprecated and shouldn't be used. Use PopScope instead. The Android predictive back feature will not work with WillPopScope. This feature was deprecated after v3.12.0-1.0.pre - lib\features\profile\edit_profile_screen.dart:230:12 - deprecated_member_use
+  error - The getter 'subtitle1' isn't defined for the type 'TextTheme' - lib\features\profile\edit_profile_screen.dart:362:46 - undefined_getter
+   info - 'value' is deprecated and shouldn't be used. Use initialValue instead. This will set the initial value for the form field. This feature was deprecated after v3.33.0-1.0.pre - lib\features\profile\edit_profile_screen.dart:384:19 - deprecated_member_use
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\profile\edit_profile_screen.dart:415:65 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\profile\screens\profile_screen.dart:144:28 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\profile\screens\profile_screen.dart:152:28 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\profile\screens\profile_screen.dart:179:28 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\profile\screens\profile_screen.dart:187:28 - use_build_context_synchronously
+  error - The method 'getBackgroundColor' isn't defined for the type 'AppColors' - lib\features\profile\screens\profile_screen.dart:415:34 - undefined_method
+  error - Expected a method, getter, setter or operator declaration - lib\features\profile\screens\profile_screen.dart:499:2 - expected_executable
+   info - Don't use 'BuildContext's across async gaps - lib\features\profile\screens\settings_screen.dart:114:28 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\profile\screens\settings_screen.dart:121:28 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\profile\screens\settings_screen.dart:137:26 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\profile\screens\settings_screen.dart:166:28 - use_build_context_synchronously
+  error - The method 'getBackgroundColor' isn't defined for the type 'AppColors' - lib\features\profile\screens\settings_screen.dart:235:34 - undefined_method
+   info - 'Share' is deprecated and shouldn't be used. Use SharePlus instead - lib\features\profile\screens\settings_screen.dart:437:26 - deprecated_member_use
+   info - 'share' is deprecated and shouldn't be used. Use SharePlus.instance.share() instead - lib\features\profile\screens\settings_screen.dart:437:32 - deprecated_member_use
+   info - The import of 'dart:ui' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart' - lib\features\quadrat\screens\quadrat_screen.dart:2:8 - unnecessary_import
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\quadrat\screens\quadrat_screen.dart:308:30 - deprecated_member_use
+warning - Unused import: 'dart:ui' - lib\features\quadrat\widgets\image_canvas.dart:2:8 - unused_import
+   info - Parameter 'key' could be a super parameter - lib\features\quadrat\widgets\image_canvas.dart:18:9 - use_super_parameters
+warning - The value of the field '_imageSize' isn't used - lib\features\quadrat\widgets\image_canvas.dart:40:9 - unused_field
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\quadrat\widgets\image_canvas.dart:140:43 - deprecated_member_use
+   info - 'scale' is deprecated and shouldn't be used. Use scaleByVector3, scaleByVector4, or scaleByDouble instead - lib\features\quadrat\widgets\image_canvas.dart:145:21 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\quadrat\widgets\image_canvas.dart:154:43 - deprecated_member_use
+   info - 'scale' is deprecated and shouldn't be used. Use scaleByVector3, scaleByVector4, or scaleByDouble instead - lib\features\quadrat\widgets\image_canvas.dart:159:21 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\quadrat\widgets\image_canvas.dart:168:43 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\quadrat\widgets\image_canvas.dart:217:30 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\features\quadrat\widgets\rectangle_selector.dart:19:9 - use_super_parameters
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\quadrat\widgets\rectangle_selector.dart:274:60 - deprecated_member_use
+   info - Parameter 'key' could be a super parameter - lib\features\quadrat\widgets\resize_handle.dart:36:9 - use_super_parameters
+   info - Parameter 'key' could be a super parameter - lib\features\quadrat\widgets\toolbar.dart:64:9 - use_super_parameters
+warning - Unused import: 'dart:typed_data' - lib\features\reports\report_generator.dart:3:8 - unused_import
+  error - Target of URI doesn't exist: '../../../core/providers/history_provider.dart' - lib\features\reports\report_history.dart:4:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: '../../../core/models/analysis_model.dart' - lib\features\reports\report_history.dart:5:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: '../screens/pdf_preview_screen.dart' - lib\features\reports\report_history.dart:6:8 - uri_does_not_exist
+   info - Parameter 'key' could be a super parameter - lib\features\reports\report_history.dart:9:9 - use_super_parameters
+  error - The name 'HistoryProvider' isn't a type, so it can't be used as a type argument - lib\features\reports\report_history.dart:22:19 - non_type_as_type_argument
+  error - The name 'AnalysisModel' isn't a type, so it can't be used as a type argument - lib\features\reports\report_history.dart:26:20 - non_type_as_type_argument
+  error - The name 'AnalysisModel' isn't a type, so it can't be used as a type argument - lib\features\reports\report_history.dart:26:61 - non_type_as_type_argument
+  error - The name 'AnalysisModel' isn't a type, so it can't be used as a type argument - lib\features\reports\report_history.dart:27:28 - non_type_as_type_argument
+  error - Undefined class 'AnalysisModel' - lib\features\reports\report_history.dart:84:20 - undefined_class
+  error - The method 'PdfPreviewScreen' isn't defined for the type '_ReportHistoryState' - lib\features\reports\report_history.dart:88:25 - undefined_method
+  error - Undefined class 'AnalysisModel' - lib\features\reports\report_history.dart:93:27 - undefined_class
+  error - The name 'HistoryProvider' isn't a type, so it can't be used as a type argument - lib\features\reports\report_history.dart:120:35 - non_type_as_type_argument
+  error - Undefined class 'AnalysisModel' - lib\features\reports\report_history.dart:148:27 - undefined_class
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\reports\report_history.dart:166:40 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\reports\report_history.dart:194:32 - deprecated_member_use
+  error - The name 'AnalysisModel' isn't a type, so it can't be used as a type argument - lib\features\reports\report_history.dart:210:47 - non_type_as_type_argument
+  error - The name 'HistoryProvider' isn't a type, so it can't be used as a type argument - lib\features\reports\report_history.dart:279:41 - non_type_as_type_argument
+   info - Parameter 'key' could be a super parameter - lib\features\reports\screens\pdf_preview_screen.dart:13:9 - use_super_parameters
+   info - Don't use 'BuildContext's across async gaps - lib\features\reports\screens\pdf_preview_screen.dart:339:28 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\reports\screens\pdf_preview_screen.dart:343:28 - use_build_context_synchronously
+   info - 'Share' is deprecated and shouldn't be used. Use SharePlus instead - lib\features\reports\screens\pdf_preview_screen.dart:355:13 - deprecated_member_use
+   info - 'shareXFiles' is deprecated and shouldn't be used. Use SharePlus.instance.share() instead - lib\features\reports\screens\pdf_preview_screen.dart:355:19 - deprecated_member_use
+   info - Don't use 'BuildContext's across async gaps - lib\features\reports\screens\pdf_preview_screen.dart:357:28 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\reports\screens\pdf_preview_screen.dart:368:28 - use_build_context_synchronously
+  error - Target of URI doesn't exist: '../../../core/providers/history_provider.dart' - lib\features\reports\screens\reports_screen.dart:6:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: '../../../core/models/analysis_model.dart' - lib\features\reports\screens\reports_screen.dart:7:8 - uri_does_not_exist
+   info - Parameter 'key' could be a super parameter - lib\features\reports\screens\reports_screen.dart:11:9 - use_super_parameters
+  error - The name 'HistoryProvider' isn't a type, so it can't be used as a type argument - lib\features\reports\screens\reports_screen.dart:27:19 - non_type_as_type_argument
+  error - The name 'HistoryProvider' isn't a type, so it can't be used as a type argument - lib\features\reports\screens\reports_screen.dart:32:23 - non_type_as_type_argument
+   info - 'value' is deprecated and shouldn't be used. Use initialValue instead. This will set the initial value for the form field. This feature was deprecated after v3.33.0-1.0.pre - lib\features\reports\screens\reports_screen.dart:48:15 - deprecated_member_use
+  error - The name 'AnalysisModel' isn't a type, so it can't be used as a type argument - lib\features\reports\screens\reports_screen.dart:112:8 - non_type_as_type_argument
+  error - The name 'AnalysisModel' isn't a type, so it can't be used as a type argument - lib\features\reports\screens\reports_screen.dart:112:42 - non_type_as_type_argument
+  error - The property 'cropType' can't be unconditionally accessed because the receiver can be 'null' - lib\features\reports\screens\reports_screen.dart:116:42 - unchecked_use_of_nullable_value
+  error - The property 'date' can't be unconditionally accessed because the receiver can be 'null' - lib\features\reports\screens\reports_screen.dart:121:24 - unchecked_use_of_nullable_value
+  error - The property 'cropType' can't be unconditionally accessed because the receiver can be 'null' - lib\features\reports\screens\reports_screen.dart:130:9 - unchecked_use_of_nullable_value
+  error - The property 'location' can't be unconditionally accessed because the receiver can be 'null' - lib\features\reports\screens\reports_screen.dart:131:14 - unchecked_use_of_nullable_value
+  error - The property 'date' can't be unconditionally accessed because the receiver can be 'null' - lib\features\reports\screens\reports_screen.dart:137:35 - unchecked_use_of_nullable_value
+  error - The property 'date' can't be unconditionally accessed because the receiver can be 'null' - lib\features\reports\screens\reports_screen.dart:137:53 - unchecked_use_of_nullable_value
+  error - The property 'date' can't be unconditionally accessed because the receiver can be 'null' - lib\features\reports\screens\reports_screen.dart:140:35 - unchecked_use_of_nullable_value
+  error - The property 'date' can't be unconditionally accessed because the receiver can be 'null' - lib\features\reports\screens\reports_screen.dart:140:53 - unchecked_use_of_nullable_value
+  error - The property 'healthScore' can't be unconditionally accessed because the receiver can be 'null' - lib\features\reports\screens\reports_screen.dart:143:35 - unchecked_use_of_nullable_value
+  error - The property 'healthScore' can't be unconditionally accessed because the receiver can be 'null' - lib\features\reports\screens\reports_screen.dart:143:59 - unchecked_use_of_nullable_value
+  error - The property 'healthScore' can't be unconditionally accessed because the receiver can be 'null' - lib\features\reports\screens\reports_screen.dart:146:35 - unchecked_use_of_nullable_value
+  error - The property 'healthScore' can't be unconditionally accessed because the receiver can be 'null' - lib\features\reports\screens\reports_screen.dart:146:59 - unchecked_use_of_nullable_value
+  error - Undefined class 'AnalysisModel' - lib\features\reports\screens\reports_screen.dart:153:30 - undefined_class
+  error - The name 'HistoryProvider' isn't a type, so it can't be used as a type argument - lib\features\reports\screens\reports_screen.dart:170:25 - non_type_as_type_argument
+   info - Don't use 'BuildContext's across async gaps - lib\features\reports\screens\reports_screen.dart:170:42 - use_build_context_synchronously
+  error - The name 'AnalysisModel' isn't a type, so it can't be used as a type argument - lib\features\reports\screens\reports_screen.dart:174:39 - non_type_as_type_argument
+  error - The property 'cropType' can't be unconditionally accessed because the receiver can be 'null' - lib\features\reports\screens\reports_screen.dart:186:16 - unchecked_use_of_nullable_value
+  error - The property 'date' can't be unconditionally accessed because the receiver can be 'null' - lib\features\reports\screens\reports_screen.dart:186:70 - unchecked_use_of_nullable_value
+  error - The property 'healthScore' can't be unconditionally accessed because the receiver can be 'null' - lib\features\reports\screens\reports_screen.dart:186:91 - unchecked_use_of_nullable_value
+   info - 'Share' is deprecated and shouldn't be used. Use SharePlus instead - lib\features\reports\screens\reports_screen.dart:189:11 - deprecated_member_use
+   info - 'shareXFiles' is deprecated and shouldn't be used. Use SharePlus.instance.share() instead - lib\features\reports\screens\reports_screen.dart:189:17 - deprecated_member_use
+  error - Undefined class 'AnalysisModel' - lib\features\reports\screens\reports_screen.dart:192:24 - undefined_class
+  error - The name 'HistoryProvider' isn't a type, so it can't be used as a type argument - lib\features\reports\screens\reports_screen.dart:203:41 - non_type_as_type_argument
+  error - Undefined class 'AnalysisModel' - lib\features\reports\screens\reports_screen.dart:277:27 - undefined_class
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\reports\screens\reports_screen.dart:293:34 - deprecated_member_use
+  error - Undefined class 'AnalysisModel' - lib\features\reports\screens\reports_screen.dart:320:27 - undefined_class
+   info - 'Share' is deprecated and shouldn't be used. Use SharePlus instead - lib\features\reports\screens\reports_screen.dart:350:23 - deprecated_member_use
+   info - 'shareXFiles' is deprecated and shouldn't be used. Use SharePlus.instance.share() instead - lib\features\reports\screens\reports_screen.dart:350:29 - deprecated_member_use
+  error - Target of URI doesn't exist: '../../../core/providers/weather_provider.dart' - lib\features\weather\farming_advice.dart:3:8 - uri_does_not_exist
+   info - Parameter 'key' could be a super parameter - lib\features\weather\farming_advice.dart:7:9 - use_super_parameters
+  error - The name 'WeatherProvider' isn't a type, so it can't be used as a type argument - lib\features\weather\farming_advice.dart:18:41 - non_type_as_type_argument
+   info - 'Share' is deprecated and shouldn't be used. Use SharePlus instead - lib\features\weather\farming_advice.dart:40:15 - deprecated_member_use
+   info - 'share' is deprecated and shouldn't be used. Use SharePlus.instance.share() instead - lib\features\weather\farming_advice.dart:40:21 - deprecated_member_use
+  error - Undefined class 'WeatherProvider' - lib\features\weather\farming_advice.dart:69:30 - undefined_class
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\weather\farming_advice.dart:79:27 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\weather\farming_advice.dart:130:27 - deprecated_member_use
+   info - 'ButtonBar' is deprecated and shouldn't be used. Use OverflowBar instead. This feature was deprecated after v3.21.0-10.0.pre - lib\features\weather\farming_advice.dart:173:11 - deprecated_member_use
+   info - 'Share' is deprecated and shouldn't be used. Use SharePlus instead - lib\features\weather\farming_advice.dart:178:19 - deprecated_member_use
+   info - 'share' is deprecated and shouldn't be used. Use SharePlus.instance.share() instead - lib\features\weather\farming_advice.dart:178:25 - deprecated_member_use
+  error - Target of URI doesn't exist: '../../../core/providers/weather_provider.dart' - lib\features\weather\screens\weather_screen.dart:4:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: 'weather_forecast.dart' - lib\features\weather\screens\weather_screen.dart:5:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: 'farming_advice.dart' - lib\features\weather\screens\weather_screen.dart:6:8 - uri_does_not_exist
+   info - Parameter 'key' could be a super parameter - lib\features\weather\screens\weather_screen.dart:9:9 - use_super_parameters
+  error - The name 'WeatherProvider' isn't a type, so it can't be used as a type argument - lib\features\weather\screens\weather_screen.dart:20:43 - non_type_as_type_argument
+  error - The name 'WeatherProvider' isn't a type, so it can't be used as a type argument - lib\features\weather\screens\weather_screen.dart:26:41 - non_type_as_type_argument
+  error - The name 'WeatherProvider' isn't a type, so it can't be used as a type argument - lib\features\weather\screens\weather_screen.dart:31:41 - non_type_as_type_argument
+  error - The name 'WeatherProvider' isn't a type, so it can't be used as a type argument - lib\features\weather\screens\weather_screen.dart:64:41 - non_type_as_type_argument
+  error - Undefined class 'WeatherProvider' - lib\features\weather\screens\weather_screen.dart:167:31 - undefined_class
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\weather\screens\weather_screen.dart:183:33 - deprecated_member_use
+  error - The name 'WeatherForecastScreen' isn't a class - lib\features\weather\screens\weather_screen.dart:280:61 - creation_with_non_type
+  error - The name 'FarmingAdviceScreen' isn't a class - lib\features\weather\screens\weather_screen.dart:294:61 - creation_with_non_type
+  error - Target of URI doesn't exist: '../../../core/providers/weather_provider.dart' - lib\features\weather\weather_forecast.dart:5:8 - uri_does_not_exist
+   info - Parameter 'key' could be a super parameter - lib\features\weather\weather_forecast.dart:8:9 - use_super_parameters
+  error - The name 'WeatherProvider' isn't a type, so it can't be used as a type argument - lib\features\weather\weather_forecast.dart:21:36 - non_type_as_type_argument
+  error - The name 'WeatherProvider' isn't a type, so it can't be used as a type argument - lib\features\weather\weather_forecast.dart:29:34 - non_type_as_type_argument
+  error - The name 'WeatherProvider' isn't a type, so it can't be used as a type argument - lib\features\weather\weather_forecast.dart:34:34 - non_type_as_type_argument
+  error - Undefined class 'WeatherProvider' - lib\features\weather\weather_forecast.dart:66:23 - undefined_class
+   info - 'Share' is deprecated and shouldn't be used. Use SharePlus instead - lib\features\weather\weather_forecast.dart:75:5 - deprecated_member_use
+   info - 'share' is deprecated and shouldn't be used. Use SharePlus.instance.share() instead - lib\features\weather\weather_forecast.dart:75:11 - deprecated_member_use
+  error - The name 'WeatherProvider' isn't a type, so it can't be used as a type argument - lib\features\weather\weather_forecast.dart:80:34 - non_type_as_type_argument
+  error - Undefined class 'WeatherProvider' - lib\features\weather\weather_forecast.dart:174:29 - undefined_class
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\weather\weather_forecast.dart:193:33 - deprecated_member_use
+  error - The getter 'subloc' isn't defined for the type 'GoRouterState' - lib\main.dart:48:33 - undefined_getter
+  error - The getter 'subloc' isn't defined for the type 'GoRouterState' - lib\main.dart:49:19 - undefined_getter
+  error - The getter 'subloc' isn't defined for the type 'GoRouterState' - lib\main.dart:50:19 - undefined_getter
+  error - The getter 'subloc' isn't defined for the type 'GoRouterState' - lib\main.dart:51:19 - undefined_getter
+  error - The getter 'subloc' isn't defined for the type 'GoRouterState' - lib\main.dart:53:36 - undefined_getter
+  error - The getter 'subloc' isn't defined for the type 'GoRouterState' - lib\main.dart:53:64 - undefined_getter
+  error - The named parameter 'reportData' is required, but there's no corresponding argument - lib\main.dart:74:18 - missing_required_argument
+  error - The named parameter 'extra' isn't defined - lib\main.dart:74:35 - undefined_named_parameter
+   info - Statements in an if should be enclosed in a block - lib\models\crop_model.dart:331:31 - curly_braces_in_flow_control_structures
+   info - Unnecessary braces in a string interpolation - lib\models\fertilizer_model.dart:381:15 - unnecessary_brace_in_string_interps
+   info - Unnecessary braces in a string interpolation - lib\models\pesticide_model.dart:456:40 - unnecessary_brace_in_string_interps
+   info - 'describeEnum' is deprecated and shouldn't be used. Use the `name` getter on enums instead. This feature was deprecated after v3.14.0-2.0.pre - lib\models\reminder_model.dart:72:20 - deprecated_member_use
+   info - 'describeEnum' is deprecated and shouldn't be used. Use the `name` getter on enums instead. This feature was deprecated after v3.14.0-2.0.pre - lib\models\reminder_model.dart:76:20 - deprecated_member_use
+   info - 'describeEnum' is deprecated and shouldn't be used. Use the `name` getter on enums instead. This feature was deprecated after v3.14.0-2.0.pre - lib\models\reminder_model.dart:80:20 - deprecated_member_use
+   info - 'describeEnum' is deprecated and shouldn't be used. Use the `name` getter on enums instead. This feature was deprecated after v3.14.0-2.0.pre - lib\models\reminder_model.dart:84:20 - deprecated_member_use
+   info - 'describeEnum' is deprecated and shouldn't be used. Use the `name` getter on enums instead. This feature was deprecated after v3.14.0-2.0.pre - lib\models\reminder_model.dart:110:15 - deprecated_member_use
+   info - 'describeEnum' is deprecated and shouldn't be used. Use the `name` getter on enums instead. This feature was deprecated after v3.14.0-2.0.pre - lib\models\reminder_model.dart:111:19 - deprecated_member_use
+   info - 'describeEnum' is deprecated and shouldn't be used. Use the `name` getter on enums instead. This feature was deprecated after v3.14.0-2.0.pre - lib\models\reminder_model.dart:112:17 - deprecated_member_use
+   info - 'describeEnum' is deprecated and shouldn't be used. Use the `name` getter on enums instead. This feature was deprecated after v3.14.0-2.0.pre - lib\models\reminder_model.dart:113:20 - deprecated_member_use
+warning - The '!' will have no effect because the receiver can't be null - lib\models\user_model.dart:407:37 - unnecessary_non_null_assertion
+   info - Unnecessary braces in a string interpolation - lib\models\user_model.dart:415:20 - unnecessary_brace_in_string_interps
+warning - The declaration '<unnamed>' isn't referenced - lib\providers\analysis_provider.dart:1:1 - unused_element
+  error - Target of URI doesn't exist: '../services/ml_service.dart' - lib\providers\analysis_provider.dart:5:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: '../services/firestore_service.dart' - lib\providers\analysis_provider.dart:6:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: '../services/camera_service.dart' - lib\providers\analysis_provider.dart:7:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: '../services/pdf_service.dart' - lib\providers\analysis_provider.dart:9:8 - uri_does_not_exist
+  error - Undefined class 'MLService' - lib\providers\analysis_provider.dart:14:9 - undefined_class
+  error - Undefined name 'MLService' - lib\providers\analysis_provider.dart:14:32 - undefined_identifier
+  error - Undefined class 'FirestoreService' - lib\providers\analysis_provider.dart:15:9 - undefined_class
+  error - Undefined name 'FirestoreService' - lib\providers\analysis_provider.dart:15:46 - undefined_identifier
+  error - Undefined class 'CameraService' - lib\providers\analysis_provider.dart:16:9 - undefined_class
+  error - Undefined name 'CameraService' - lib\providers\analysis_provider.dart:16:40 - undefined_identifier
+  error - Undefined class 'PdfService' - lib\providers\analysis_provider.dart:17:9 - undefined_class
+  error - The method 'PdfService' isn't defined for the type 'AnalysisProvider' - lib\providers\analysis_provider.dart:17:34 - undefined_method
+   info - 'Share' is deprecated and shouldn't be used. Use SharePlus instead - lib\providers\analysis_provider.dart:161:15 - deprecated_member_use
+   info - 'shareXFiles' is deprecated and shouldn't be used. Use SharePlus.instance.share() instead - lib\providers\analysis_provider.dart:161:21 - deprecated_member_use
+  error - The named parameter 'createdAt' is required, but there's no corresponding argument - lib\providers\analysis_provider.dart:207:12 - missing_required_argument
+  error - The named parameter 'recommendations' is required, but there's no corresponding argument - lib\providers\analysis_provider.dart:207:12 - missing_required_argument
+  error - The named parameter 'updatedAt' is required, but there's no corresponding argument - lib\providers\analysis_provider.dart:207:12 - missing_required_argument
+  error - Expected to find ';' - lib\providers\analysis_provider.dart:249:1 - expected_token
+  error - Undefined class 'DOCUMENT' - lib\providers\analysis_provider.dart:249:1 - undefined_class
+  error - Directives must appear before any declarations - lib\providers\analysis_provider.dart:252:1 - directive_after_declaration
+  error - Expected an identifier - lib\providers\analysis_provider.dart:252:1 - missing_identifier
+  error - Directives must appear before any declarations - lib\providers\analysis_provider.dart:253:1 - directive_after_declaration
+  error - Directives must appear before any declarations - lib\providers\analysis_provider.dart:254:1 - directive_after_declaration
+  error - Target of URI doesn't exist: '../database/cache_service.dart' - lib\providers\app_provider.dart:8:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: '../database/secure_storage_service.dart' - lib\providers\app_provider.dart:9:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: '../network/network_info.dart' - lib\providers\app_provider.dart:10:8 - uri_does_not_exist
+  error - Undefined class 'CacheService' - lib\providers\app_provider.dart:15:9 - undefined_class
+  error - The method 'CacheService' isn't defined for the type 'AppProvider' - lib\providers\app_provider.dart:15:38 - undefined_method
+  error - Undefined class 'SecureStorageService' - lib\providers\app_provider.dart:16:9 - undefined_class
+  error - The method 'SecureStorageService' isn't defined for the type 'AppProvider' - lib\providers\app_provider.dart:16:47 - undefined_method
+  error - Undefined class 'NetworkInfo' - lib\providers\app_provider.dart:17:9 - undefined_class
+warning - The value of the field '_networkInfo' isn't used - lib\providers\app_provider.dart:17:21 - unused_field
+  error - The method 'NetworkInfo' isn't defined for the type 'AppProvider' - lib\providers\app_provider.dart:17:36 - undefined_method
+   info - The type of the right operand ('ConnectivityResult') isn't a subtype or a supertype of the left operand ('List<ConnectivityResult>') - lib\providers\app_provider.dart:84:36 - unrelated_type_equality_checks
+  error - The type 'AppLifecycleState' isn't exhaustively matched by the switch cases since it doesn't match the pattern 'AppLifecycleState.hidden' - lib\providers\app_provider.dart:195:5 - non_exhaustive_switch_statement
+warning - The declaration '_savePreferences' isn't referenced - lib\providers\app_provider.dart:237:16 - unused_element
+  error - Target of URI doesn't exist: '../services/chatbot_service.dart' - lib\providers\chatbot_provider.dart:4:8 - uri_does_not_exist
+  error - Undefined class 'ChatbotService' - lib\providers\chatbot_provider.dart:9:9 - undefined_class
+  error - Undefined name 'ChatbotService' - lib\providers\chatbot_provider.dart:9:42 - undefined_identifier
+  error - The name 'ChatMessage' isn't a type, so it can't be used as a type argument - lib\providers\chatbot_provider.dart:14:14 - non_type_as_type_argument
+  error - The name 'ChatMessage' isn't a type, so it can't be used as a type argument - lib\providers\chatbot_provider.dart:19:8 - non_type_as_type_argument
+  error - The property 'isRead' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\chatbot_provider.dart:22:52 - unchecked_use_of_nullable_value
+  error - The method 'ChatMessage' isn't defined for the type 'ChatbotProvider' - lib\providers\chatbot_provider.dart:34:25 - undefined_method
+  error - Undefined name 'MessageType' - lib\providers\chatbot_provider.dart:39:13 - undefined_identifier
+  error - Undefined name 'MessageStatus' - lib\providers\chatbot_provider.dart:40:15 - undefined_identifier
+  error - The method 'ChatMessage' isn't defined for the type 'ChatbotProvider' - lib\providers\chatbot_provider.dart:46:26 - undefined_method
+  error - Undefined name 'MessageType' - lib\providers\chatbot_provider.dart:51:15 - undefined_identifier
+  error - Undefined name 'MessageStatus' - lib\providers\chatbot_provider.dart:52:17 - undefined_identifier
+  error - Undefined name 'MessageStatus' - lib\providers\chatbot_provider.dart:55:44 - undefined_identifier
+  error - Undefined name 'MessageStatus' - lib\providers\chatbot_provider.dart:59:44 - undefined_identifier
+  error - The method 'ChatMessage' isn't defined for the type 'ChatbotProvider' - lib\providers\chatbot_provider.dart:60:28 - undefined_method
+  error - Undefined name 'MessageType' - lib\providers\chatbot_provider.dart:65:15 - undefined_identifier
+  error - Undefined name 'MessageStatus' - lib\providers\chatbot_provider.dart:66:17 - undefined_identifier
+  error - The method 'ChatMessage' isn't defined for the type 'ChatbotProvider' - lib\providers\chatbot_provider.dart:83:25 - undefined_method
+  error - Undefined name 'MessageType' - lib\providers\chatbot_provider.dart:88:13 - undefined_identifier
+  error - Undefined name 'MessageStatus' - lib\providers\chatbot_provider.dart:89:15 - undefined_identifier
+  error - The method 'ChatMessage' isn't defined for the type 'ChatbotProvider' - lib\providers\chatbot_provider.dart:96:26 - undefined_method
+  error - Undefined name 'MessageType' - lib\providers\chatbot_provider.dart:101:15 - undefined_identifier
+  error - Undefined name 'MessageStatus' - lib\providers\chatbot_provider.dart:102:17 - undefined_identifier
+  error - Undefined name 'MessageStatus' - lib\providers\chatbot_provider.dart:105:44 - undefined_identifier
+  error - Undefined name 'MessageStatus' - lib\providers\chatbot_provider.dart:109:44 - undefined_identifier
+  error - The method 'ChatMessage' isn't defined for the type 'ChatbotProvider' - lib\providers\chatbot_provider.dart:110:28 - undefined_method
+  error - Undefined name 'MessageType' - lib\providers\chatbot_provider.dart:115:15 - undefined_identifier
+  error - Undefined name 'MessageStatus' - lib\providers\chatbot_provider.dart:116:17 - undefined_identifier
+  error - The property 'id' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\chatbot_provider.dart:136:36 - unchecked_use_of_nullable_value
+  error - The property 'status' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\chatbot_provider.dart:144:24 - unchecked_use_of_nullable_value
+  error - Undefined name 'MessageStatus' - lib\providers\chatbot_provider.dart:144:34 - undefined_identifier
+  error - Undefined name 'ChatMessage' - lib\providers\chatbot_provider.dart:145:21 - undefined_identifier
+  error - Undefined name 'ChatMessage' - lib\providers\chatbot_provider.dart:162:37 - undefined_identifier
+  error - The method 'toMap' can't be unconditionally invoked because the receiver can be 'null' - lib\providers\chatbot_provider.dart:170:58 - unchecked_use_of_nullable_value
+  error - The method 'ChatMessage' isn't defined for the type 'ChatbotProvider' - lib\providers\chatbot_provider.dart:176:27 - undefined_method
+  error - Undefined name 'MessageType' - lib\providers\chatbot_provider.dart:181:13 - undefined_identifier
+  error - Undefined name 'MessageStatus' - lib\providers\chatbot_provider.dart:182:15 - undefined_identifier
+  error - Undefined class 'ChatMessage' - lib\providers\chatbot_provider.dart:197:3 - undefined_class
+  error - The property 'id' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\chatbot_provider.dart:199:44 - unchecked_use_of_nullable_value
+  error - The name 'ChatMessage' isn't a type, so it can't be used as a type argument - lib\providers\chatbot_provider.dart:206:8 - non_type_as_type_argument
+  error - The property 'message' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\chatbot_provider.dart:208:25 - unchecked_use_of_nullable_value
+  error - The method 'toMap' can't be unconditionally invoked because the receiver can be 'null' - lib\providers\chatbot_provider.dart:214:47 - unchecked_use_of_nullable_value
+  error - Undefined class 'ChatMessage' - lib\providers\chatbot_provider.dart:231:20 - undefined_class
+  error - Undefined class 'MessageStatus' - lib\providers\chatbot_provider.dart:250:40 - undefined_class
+  error - The property 'id' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\chatbot_provider.dart:251:49 - unchecked_use_of_nullable_value
+   info - The imported package 'internet_connection_checker' isn't a dependency of the importing package - lib\providers\connectivity_provider.dart:5:8 - depend_on_referenced_packages
+  error - Target of URI doesn't exist: 'package:internet_connection_checker/internet_connection_checker.dart' - lib\providers\connectivity_provider.dart:5:8 - uri_does_not_exist
+  error - Undefined class 'InternetConnectionChecker' - lib\providers\connectivity_provider.dart:13:9 - undefined_class
+  error - The method 'InternetConnectionChecker' isn't defined for the type 'ConnectivityProvider' - lib\providers\connectivity_provider.dart:13:54 - undefined_method
+  error - The name 'InternetConnectionStatus' isn't a type, so it can't be used as a type argument - lib\providers\connectivity_provider.dart:16:22 - non_type_as_type_argument
+  error - The argument type 'List<ConnectivityResult>' can't be assigned to the parameter type 'ConnectivityResult'.  - lib\providers\connectivity_provider.dart:44:37 - argument_type_not_assignable
+  error - A value of type 'StreamSubscription<List<ConnectivityResult>>' can't be assigned to a variable of type 'StreamSubscription<ConnectivityResult>?' - lib\providers\connectivity_provider.dart:65:9 - invalid_assignment
+  error - The argument type 'Future<void> Function(ConnectivityResult)' can't be assigned to the parameter type 'void Function(List<ConnectivityResult>)?'.  - lib\providers\connectivity_provider.dart:65:52 - argument_type_not_assignable
+  error - Undefined name 'InternetConnectionStatus' - lib\providers\connectivity_provider.dart:68:39 - undefined_identifier
+  error - Target of URI doesn't exist: '../services/firestore_service.dart' - lib\providers\history_provider.dart:5:8 - uri_does_not_exist
+  error - Undefined class 'FirestoreService' - lib\providers\history_provider.dart:11:9 - undefined_class
+  error - Undefined name 'FirestoreService' - lib\providers\history_provider.dart:11:46 - undefined_identifier
+  error - The name 'AnalysisModel' isn't a type, so it can't be used as a type argument - lib\providers\history_provider.dart:15:14 - non_type_as_type_argument
+  error - The name 'AnalysisModel' isn't a type, so it can't be used as a type argument - lib\providers\history_provider.dart:16:14 - non_type_as_type_argument
+  error - The name 'AnalysisModel' isn't a type, so it can't be used as a type argument - lib\providers\history_provider.dart:34:8 - non_type_as_type_argument
+  error - The name 'AnalysisModel' isn't a type, so it can't be used as a type argument - lib\providers\history_provider.dart:35:8 - non_type_as_type_argument
+  error - Undefined name 'AnalysisModel' - lib\providers\history_provider.dart:47:25 - undefined_identifier
+  error - Undefined class 'AnalysisModel' - lib\providers\history_provider.dart:100:29 - undefined_class
+  error - The property 'id' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:111:39 - unchecked_use_of_nullable_value
+  error - The property 'id' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:112:43 - unchecked_use_of_nullable_value
+  error - The property 'cropType' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:135:16 - unchecked_use_of_nullable_value
+  error - The property 'notes' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:136:13 - unchecked_use_of_nullable_value
+  error - The property 'location' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:137:14 - unchecked_use_of_nullable_value
+  error - Undefined class 'AnalysisModel' - lib\providers\history_provider.dart:190:3 - undefined_class
+  error - The property 'id' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:192:47 - unchecked_use_of_nullable_value
+  error - The name 'AnalysisModel' isn't a type, so it can't be used as a type argument - lib\providers\history_provider.dart:199:8 - non_type_as_type_argument
+  error - The name 'AnalysisModel' isn't a type, so it can't be used as a type argument - lib\providers\history_provider.dart:200:25 - non_type_as_type_argument
+  error - The property 'date' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:201:26 - unchecked_use_of_nullable_value
+  error - The property 'date' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:201:43 - unchecked_use_of_nullable_value
+  error - The property 'healthScore' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:216:49 - unchecked_use_of_nullable_value
+  error - The operator '+' can't be unconditionally invoked because the receiver can be 'null' - lib\providers\history_provider.dart:216:81 - unchecked_use_of_nullable_value
+  error - The property 'hasDisease' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:217:50 - unchecked_use_of_nullable_value
+  error - The property 'hasPest' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:218:46 - unchecked_use_of_nullable_value
+  error - The method 'toMap' can't be unconditionally invoked because the receiver can be 'null' - lib\providers\history_provider.dart:229:44 - unchecked_use_of_nullable_value
+  error - Undefined name 'AnalysisModel' - lib\providers\history_provider.dart:237:43 - undefined_identifier
+  error - The name 'AnalysisModel' isn't a type, so it can't be used as a type argument - lib\providers\history_provider.dart:252:10 - non_type_as_type_argument
+  error - The property 'cropType' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:256:27 - unchecked_use_of_nullable_value
+  error - The property 'date' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:262:27 - unchecked_use_of_nullable_value
+  error - The property 'date' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:262:64 - unchecked_use_of_nullable_value
+  error - The property 'healthScore' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:269:9 - unchecked_use_of_nullable_value
+  error - The property 'healthScore' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:269:46 - unchecked_use_of_nullable_value
+  error - The property 'date' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:284:43 - unchecked_use_of_nullable_value
+  error - The property 'date' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:284:60 - unchecked_use_of_nullable_value
+  error - The property 'date' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:287:43 - unchecked_use_of_nullable_value
+  error - The property 'date' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:287:60 - unchecked_use_of_nullable_value
+  error - The property 'healthScore' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:290:43 - unchecked_use_of_nullable_value
+  error - The property 'healthScore' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:290:67 - unchecked_use_of_nullable_value
+  error - The property 'healthScore' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:293:43 - unchecked_use_of_nullable_value
+  error - The property 'healthScore' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:293:67 - unchecked_use_of_nullable_value
+  error - The property 'cropType' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:296:43 - unchecked_use_of_nullable_value
+  error - The property 'cropType' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:296:64 - unchecked_use_of_nullable_value
+  error - The property 'biomass' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:299:43 - unchecked_use_of_nullable_value
+  error - The property 'biomass' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:299:63 - unchecked_use_of_nullable_value
+  error - The property 'biomass' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:302:43 - unchecked_use_of_nullable_value
+  error - The property 'biomass' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:302:63 - unchecked_use_of_nullable_value
+  error - The property 'date' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:305:43 - unchecked_use_of_nullable_value
+  error - The property 'date' can't be unconditionally accessed because the receiver can be 'null' - lib\providers\history_provider.dart:305:60 - unchecked_use_of_nullable_value
+  error - The method 'toMap' can't be unconditionally invoked because the receiver can be 'null' - lib\providers\history_provider.dart:313:61 - unchecked_use_of_nullable_value
+  error - Undefined name 'AnalysisModel' - lib\providers\history_provider.dart:323:41 - undefined_identifier
+  error - Target of URI doesn't exist: '../services/firestore_service.dart' - lib\providers\profile_provider.dart:10:8 - uri_does_not_exist
+  error - Undefined class 'FirestoreService' - lib\providers\profile_provider.dart:17:9 - undefined_class
+  error - Undefined name 'FirestoreService' - lib\providers\profile_provider.dart:17:46 - undefined_identifier
+  error - The method 'fromMap' isn't defined for the type 'UserModel' - lib\providers\profile_provider.dart:42:34 - undefined_method
+  error - The getter 'profileImageUrl' isn't defined for the type 'UserModel' - lib\providers\profile_provider.dart:43:42 - undefined_getter
+  error - The getter 'id' isn't defined for the type 'UserModel' - lib\providers\profile_provider.dart:58:60 - undefined_getter
+  error - The method 'toMap' isn't defined for the type 'UserModel' - lib\providers\profile_provider.dart:58:69 - undefined_method
+  error - The method 'updateEmail' isn't defined for the type 'User' - lib\providers\profile_provider.dart:87:32 - undefined_method
+  error - The getter 'phone' isn't defined for the type 'UserModel' - lib\providers\profile_provider.dart:181:14 - undefined_getter
+  error - The getter 'location' isn't defined for the type 'UserModel' - lib\providers\profile_provider.dart:182:14 - undefined_getter
+  error - The operator '<=' can't be unconditionally invoked because the receiver can be 'null' - lib\providers\profile_provider.dart:183:23 - unchecked_use_of_nullable_value
+  error - The getter 'crops' isn't defined for the type 'UserModel' - lib\providers\profile_provider.dart:184:14 - undefined_getter
+  error - The getter 'phone' isn't defined for the type 'UserModel' - lib\providers\profile_provider.dart:202:14 - undefined_getter
+  error - The getter 'location' isn't defined for the type 'UserModel' - lib\providers\profile_provider.dart:203:14 - undefined_getter
+  error - The operator '>' can't be unconditionally invoked because the receiver can be 'null' - lib\providers\profile_provider.dart:204:23 - unchecked_use_of_nullable_value
+  error - The getter 'crops' isn't defined for the type 'UserModel' - lib\providers\profile_provider.dart:205:14 - undefined_getter
+  error - The getter 'profileImageUrl' isn't defined for the type 'UserModel' - lib\providers\profile_provider.dart:206:14 - undefined_getter
+  error - The method 'toMap' isn't defined for the type 'UserModel' - lib\providers\profile_provider.dart:236:40 - undefined_method
+  error - The method 'fromMap' isn't defined for the type 'UserModel' - lib\providers\profile_provider.dart:238:32 - undefined_method
+  error - A value of type 'Object' can't be returned from the method '_compressImage' because it has a return type of 'Future<File>' - lib\providers\profile_provider.dart:277:12 - return_of_invalid_type
+   info - 'value' is deprecated and shouldn't be used. Use component accessors like .r or .g, or toARGB32 for an explicit conversion - lib\providers\theme_provider.dart:254:22 - deprecated_member_use
+   info - The imported package 'geocoding' isn't a dependency of the importing package - lib\providers\weather_provider.dart:6:8 - depend_on_referenced_packages
+  error - Target of URI doesn't exist: 'package:geocoding/geocoding.dart' - lib\providers\weather_provider.dart:6:8 - uri_does_not_exist
+   info - The private field _savedLocations could be 'final' - lib\providers\weather_provider.dart:104:16 - prefer_final_fields
+warning - The value of the field '_savedLocations' isn't used - lib\providers\weather_provider.dart:104:16 - unused_field
+   info - 'desiredAccuracy' is deprecated and shouldn't be used. use settings parameter with AndroidSettings, AppleSettings, WebSettings, or LocationSettings - lib\providers\weather_provider.dart:139:58 - deprecated_member_use
+   info - 'desiredAccuracy' is deprecated and shouldn't be used. use settings parameter with AndroidSettings, AppleSettings, WebSettings, or LocationSettings - lib\providers\weather_provider.dart:194:60 - deprecated_member_use
+   info - 'desiredAccuracy' is deprecated and shouldn't be used. use settings parameter with AndroidSettings, AppleSettings, WebSettings, or LocationSettings - lib\providers\weather_provider.dart:212:58 - deprecated_member_use
+  error - The method 'placemarkFromCoordinates' isn't defined for the type 'WeatherProvider' - lib\providers\weather_provider.dart:356:30 - undefined_method
+warning - The asset directory 'assets/images/' doesn't exist - pubspec.yaml:92:7 - asset_directory_does_not_exist
+warning - The asset directory 'assets/lottie/' doesn't exist - pubspec.yaml:93:7 - asset_directory_does_not_exist
+  error - The name 'MyApp' isn't a class - test\widget_test.dart:16:35 - creation_with_non_type
+

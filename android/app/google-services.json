@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "996358511783",
+    "project_id": "cropanalyzer-540dc",
+    "storage_bucket": "cropanalyzer-540dc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:996358511783:android:c2523ba39bba9d1eaa0f82",
+        "android_client_info": {
+          "package_name": "com.cropanalyzer.crop_analyzer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcFsEg-s9-9Zid-cNkEpZQuZOkUHRDHVE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
