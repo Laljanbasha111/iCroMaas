@@ -1,23 +1,10 @@
-import 'dart:io';
+﻿import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:lottie/lottie.dart';
 
 import '../../../app/router/app_router.dart';
-import '../../../app/theme/app_colors.dart';
+import '../../../core/services/render_analysis_service.dart';
 
-/// Screen displayed after an image is selected.
-///
-/// Automatic crop analysis is currently unavailable because the
-/// API, YOLO, and TFLite analysis engines have been removed.
-///
-/// This screen:
-/// - Checks whether the selected image exists
-/// - Avoids calling the removed YOLO/API service
-/// - Shows a clear explanation to the user
-/// - Prevents repeated analysis errors
-/// - Returns the user to the home screen
 class AnalysisLoadingScreen extends StatefulWidget {
   const AnalysisLoadingScreen({
     super.key,
@@ -34,101 +21,114 @@ class AnalysisLoadingScreen extends StatefulWidget {
 class _AnalysisLoadingScreenState
     extends State<AnalysisLoadingScreen> {
   double _progress = 0.0;
-
-  String _status =
-      'Checking analysis availability...';
-
+  String _status = 'Preparing image...';
   bool _hasError = false;
-
   String _errorMessage = '';
-
-  bool _checkStarted = false;
+  bool _analysisStarted = false;
 
   @override
   void initState() {
     super.initState();
 
-    WidgetsBinding.instance.addPostFrameCallback(
-          (_) {
-        if (mounted) {
-          _checkAnalysisAvailability();
-        }
-      },
-    );
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) {
+        _runAnalysis();
+      }
+    });
   }
 
-  // ============================================================
-  // CHECK ANALYSIS AVAILABILITY
-  // ============================================================
-
-  Future<void> _checkAnalysisAvailability() async {
-    if (_checkStarted) {
+  Future<void> _runAnalysis() async {
+    if (_analysisStarted) {
       return;
     }
 
-    _checkStarted = true;
+    _analysisStarted = true;
 
     try {
-      _updateStatus(
-        0.15,
-        'Checking selected image...',
-      );
+      final imageFile = File(widget.imagePath);
 
-      debugPrint(
-        '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━',
-      );
-      debugPrint(
-        '📷 CHECKING SELECTED CROP IMAGE',
-      );
-      debugPrint(
-        '📁 Image: ${widget.imagePath}',
-      );
-      debugPrint(
-        '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━',
-      );
+      setState(() {
+        _progress = 0.15;
+        _status = 'Checking selected image...';
+      });
 
-      final String safeImagePath =
-      widget.imagePath.trim();
-
-      if (safeImagePath.isEmpty) {
+      if (!await imageFile.exists()) {
         throw Exception(
-          'No image path was provided.',
+          'Selected image was not found.',
         );
       }
 
-      final File imageFile =
-      File(safeImagePath);
+      final fileLength = await imageFile.length();
 
-      final bool imageExists =
-      await imageFile.exists();
-
-      if (!imageExists) {
+      if (fileLength == 0) {
         throw Exception(
-          'Image file not found:\n$safeImagePath',
+          'Selected image is empty.',
         );
       }
 
-      final int fileSize =
-      await imageFile.length();
+      setState(() {
+        _progress = 0.30;
+        _status = 'Connecting to iCroMaas AI...';
+      });
 
-      if (fileSize <= 0) {
+      debugPrint(
+        'Render analysis image: ${widget.imagePath}',
+      );
+
+      final response =
+          await RenderAnalysisService.analyzeImage(
+        widget.imagePath,
+      );
+
+      setState(() {
+        _progress = 0.80;
+        _status = 'Processing AI results...';
+      });
+
+      final analysis = response['analysis'];
+
+      if (analysis is! Map<String, dynamic>) {
         throw Exception(
-          'The selected image file is empty.',
+          'Invalid analysis response received from server.',
         );
       }
 
-      debugPrint(
-        '✅ Image file exists',
+      final cropType =
+          (analysis['cropType'] ??
+                  analysis['cropClass'] ??
+                  'Unknown')
+              .toString();
+
+      final cropConfidence = _toDouble(
+        analysis['cropTypeConfidence'] ??
+            analysis['confidence'],
+      );
+
+      final biomass = _toDouble(
+        analysis['biomass'],
+      );
+
+      final nitrogen = _toDouble(
+        analysis['nitrogen'],
       );
 
       debugPrint(
-        '📦 Image size: $fileSize bytes',
+        'Crop Type: $cropType',
+      );
+      debugPrint(
+        'Crop Confidence: $cropConfidence',
+      );
+      debugPrint(
+        'Biomass: $biomass',
+      );
+      debugPrint(
+        'Nitrogen: $nitrogen',
       );
 
-      _updateStatus(
-        0.35,
-        'Image is ready...',
-      );
+      setState(() {
+        _progress = 1.0;
+        _status = 'Analysis complete!';
+      });
 
       await Future<void>.delayed(
         const Duration(milliseconds: 300),
@@ -138,414 +138,200 @@ class _AnalysisLoadingScreenState
         return;
       }
 
-      throw StateError(
-        'Automatic crop analysis is currently unavailable. '
-            'No API, YOLO, or TFLite analysis engine is configured.',
+      AppRouter.navigateToResult(
+        context,
+        imagePath: widget.imagePath,
+        cropType: cropType,
+        nitrogen: nitrogen,
+        biomass: biomass,
+        confidence: cropConfidence,
       );
-    } catch (error, stackTrace) {
+    } catch (e, stackTrace) {
       debugPrint(
-        '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━',
+        'Render analysis failed: $e',
       );
-      debugPrint(
-        '⚠️ CROP ANALYSIS UNAVAILABLE',
-      );
-      debugPrint(
-        '⚠️ Error: $error',
-      );
-
-      debugPrint(
-        '📌 Stack trace: $stackTrace',
-      );
-
-      debugPrint(
-        '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━',
+      debugPrintStack(
+        stackTrace: stackTrace,
       );
 
       if (!mounted) {
         return;
       }
 
-      final String message =
-      error.toString().replaceFirst(
-        'Exception: ',
-        '',
-      );
-
       setState(() {
         _hasError = true;
-        _errorMessage = message;
-        _status = 'Analysis unavailable';
+        _errorMessage = e.toString().replaceFirst(
+              'Exception: ',
+              '',
+            );
+        _status = 'Analysis failed';
         _progress = 0.0;
       });
-
-      await Future<void>.delayed(
-        const Duration(milliseconds: 250),
-      );
-
-      if (mounted) {
-        _showUnavailableDialog();
-      }
     }
   }
 
-  // ============================================================
-  // UPDATE STATUS
-  // ============================================================
-
-  void _updateStatus(
-      double progress,
-      String status,
-      ) {
-    if (!mounted) {
-      return;
+  double _toDouble(dynamic value) {
+    if (value == null) {
+      return 0.0;
     }
 
+    if (value is num) {
+      return value.toDouble();
+    }
+
+    return double.tryParse(value.toString()) ?? 0.0;
+  }
+
+  void _retry() {
     setState(() {
-      _progress = progress
-          .clamp(0.0, 1.0)
-          .toDouble();
-
-      _status = status;
+      _progress = 0.0;
+      _status = 'Preparing image...';
+      _hasError = false;
+      _errorMessage = '';
+      _analysisStarted = false;
     });
+
+    _runAnalysis();
   }
-
-  // ============================================================
-  // UNAVAILABLE DIALOG
-  // ============================================================
-
-  void _showUnavailableDialog() {
-    if (!mounted) {
-      return;
-    }
-
-    showDialog<void>(
-      context: context,
-      barrierDismissible: false,
-      builder: (
-          BuildContext dialogContext,
-          ) {
-        return AlertDialog(
-          shape: RoundedRectangleBorder(
-            borderRadius:
-            BorderRadius.circular(16),
-          ),
-          title: Row(
-            children: [
-              Icon(
-                Icons.info_outline,
-                color: AppColors.primary,
-                size: 28,
-              ),
-              const SizedBox(width: 12),
-              const Expanded(
-                child: Text(
-                  'Analysis Unavailable',
-                ),
-              ),
-            ],
-          ),
-          content: SingleChildScrollView(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment:
-              CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  'The image was selected successfully, '
-                      'but automatic crop analysis is not currently '
-                      'configured in this app.',
-                  style: TextStyle(
-                    fontSize: 15,
-                    height: 1.4,
-                  ),
-                ),
-                const SizedBox(height: 14),
-                Container(
-                  width: double.infinity,
-                  padding:
-                  const EdgeInsets.all(12),
-                  decoration: BoxDecoration(
-                    color: AppColors.primary
-                        .withValues(alpha: 0.06),
-                    borderRadius:
-                    BorderRadius.circular(10),
-                    border: Border.all(
-                      color: AppColors.primary
-                          .withValues(alpha: 0.20),
-                    ),
-                  ),
-                  child: Text(
-                    _errorMessage.isEmpty
-                        ? 'No analysis engine is configured.'
-                        : _errorMessage,
-                    style: TextStyle(
-                      color: Colors.grey[800],
-                      fontSize: 13,
-                      height: 1.35,
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 16),
-                const Text(
-                  'Current status:',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(height: 8),
-                _buildStatusItem(
-                  icon: Icons.check_circle_outline,
-                  text: 'Image selection is working.',
-                  color: Colors.green,
-                ),
-                _buildStatusItem(
-                  icon: Icons.remove_circle_outline,
-                  text:
-                  'Automatic crop prediction is disabled.',
-                  color: Colors.orange,
-                ),
-                _buildStatusItem(
-                  icon: Icons.remove_circle_outline,
-                  text:
-                  'No API, YOLO, or TFLite engine is active.',
-                  color: Colors.orange,
-                ),
-              ],
-            ),
-          ),
-          actions: [
-            ElevatedButton.icon(
-              onPressed: () {
-                Navigator.of(dialogContext).pop();
-                _goToHome();
-              },
-              icon: const Icon(
-                Icons.arrow_back,
-              ),
-              label: const Text(
-                'Back to Home',
-              ),
-              style: ElevatedButton.styleFrom(
-                backgroundColor:
-                AppColors.primary,
-                foregroundColor: Colors.white,
-              ),
-            ),
-          ],
-        );
-      },
-    );
-  }
-
-  // ============================================================
-  // STATUS ITEM
-  // ============================================================
-
-  Widget _buildStatusItem({
-    required IconData icon,
-    required String text,
-    required Color color,
-  }) {
-    return Padding(
-      padding: const EdgeInsets.only(
-        bottom: 7,
-      ),
-      child: Row(
-        crossAxisAlignment:
-        CrossAxisAlignment.start,
-        children: [
-          Icon(
-            icon,
-            color: color,
-            size: 18,
-          ),
-          const SizedBox(width: 8),
-          Expanded(
-            child: Text(
-              text,
-              style: TextStyle(
-                fontSize: 13,
-                color: Colors.grey[700],
-                height: 1.3,
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  // ============================================================
-  // NAVIGATION
-  // ============================================================
-
-  void _goToHome() {
-    if (!mounted) {
-      return;
-    }
-
-    context.go(
-      AppRouter.homePath,
-    );
-  }
-
-  // ============================================================
-  // BUILD UI
-  // ============================================================
 
   @override
-  Widget build(
-      BuildContext context,
-      ) {
-    return PopScope(
-      canPop: false,
-      child: Scaffold(
-        backgroundColor: Colors.white,
-        body: SafeArea(
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('AI Crop Analysis'),
+        automaticallyImplyLeading: false,
+      ),
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(24),
           child: Center(
-            child: Padding(
-              padding: const EdgeInsets.all(24),
-              child: Column(
-                mainAxisAlignment:
-                MainAxisAlignment.center,
-                children: [
-                  Lottie.asset(
-                    'assets/lottie/ai_processing.json',
-                    width: 220,
-                    height: 220,
-                    repeat: !_hasError,
-                    errorBuilder: (
-                        BuildContext context,
-                        Object error,
-                        StackTrace? stackTrace,
-                        ) {
-                      return Icon(
-                        _hasError
-                            ? Icons.info_outline
-                            : Icons.analytics_outlined,
-                        size: 120,
-                        color: _hasError
-                            ? Colors.orange
-                            : AppColors.primary,
-                      );
-                    },
-                  ),
-                  const SizedBox(height: 35),
-                  Text(
-                    _hasError
-                        ? 'Analysis Unavailable'
-                        : 'Preparing Image',
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: _hasError
-                          ? Colors.orange[800]
-                          : AppColors.primary,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 10),
-                  Text(
-                    _status,
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: _hasError
-                          ? Colors.orange[800]
-                          : Colors.black54,
-                      fontWeight: FontWeight.w500,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 35),
-                  ClipRRect(
-                    borderRadius:
-                    BorderRadius.circular(12),
-                    child: LinearProgressIndicator(
-                      value: _progress,
-                      minHeight: 10,
-                      color: _hasError
-                          ? Colors.orange
-                          : AppColors.primary,
-                      backgroundColor:
-                      Colors.grey.shade300,
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-                  Text(
-                    '${(_progress * 100).toInt()}%',
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: _hasError
-                          ? Colors.orange[800]
-                          : AppColors.primary,
-                    ),
-                  ),
-                  const SizedBox(height: 40),
-                  Container(
-                    padding:
-                    const EdgeInsets.all(16),
-                    decoration: BoxDecoration(
-                      color: _hasError
-                          ? Colors.orange.withValues(
-                        alpha: 0.10,
-                      )
-                          : AppColors.primary
-                          .withValues(
-                        alpha: 0.10,
-                      ),
-                      borderRadius:
-                      BorderRadius.circular(12),
-                      border: Border.all(
-                        color: _hasError
-                            ? Colors.orange.withValues(
-                          alpha: 0.25,
-                        )
-                            : AppColors.primary
-                            .withValues(
-                          alpha: 0.20,
-                        ),
-                      ),
-                    ),
-                    child: Row(
-                      crossAxisAlignment:
-                      CrossAxisAlignment.start,
-                      children: [
-                        Icon(
-                          _hasError
-                              ? Icons.info_outline
-                              : Icons.image_outlined,
-                          color: _hasError
-                              ? Colors.orange[800]
-                              : AppColors.primary,
-                          size: 22,
-                        ),
-                        const SizedBox(width: 12),
-                        Expanded(
-                          child: Text(
-                            _hasError
-                                ? 'Your image is safe. '
-                                'Automatic analysis is currently '
-                                'disabled.'
-                                : 'Checking the selected image.',
-                            style: TextStyle(
-                              fontSize: 13,
-                              height: 1.35,
-                              color: _hasError
-                                  ? Colors.orange[900]
-                                  : AppColors.primary,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            child: _hasError
+                ? _buildErrorView(colorScheme)
+                : _buildLoadingView(colorScheme),
           ),
         ),
       ),
+    );
+  }
+
+  Widget _buildLoadingView(ColorScheme colorScheme) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          width: 110,
+          height: 110,
+          decoration: BoxDecoration(
+            color: colorScheme.primary.withValues(alpha: 0.10),
+            shape: BoxShape.circle,
+          ),
+          child: Icon(
+            Icons.eco,
+            size: 58,
+            color: colorScheme.primary,
+          ),
+        ),
+        const SizedBox(height: 28),
+        Text(
+          'Analyzing your crop',
+          textAlign: TextAlign.center,
+          style: Theme.of(context)
+              .textTheme
+              .headlineSmall
+              ?.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
+        ),
+        const SizedBox(height: 12),
+        Text(
+          _status,
+          textAlign: TextAlign.center,
+          style: Theme.of(context).textTheme.bodyLarge,
+        ),
+        const SizedBox(height: 30),
+        SizedBox(
+          width: 260,
+          child: LinearProgressIndicator(
+            value: _progress > 0 ? _progress : null,
+            minHeight: 8,
+            borderRadius: BorderRadius.circular(10),
+          ),
+        ),
+        const SizedBox(height: 14),
+        Text(
+          _progress > 0
+              ? '${(_progress * 100).round()}%'
+              : 'Connecting...',
+          style: Theme.of(context).textTheme.bodyMedium,
+        ),
+        const SizedBox(height: 24),
+        Text(
+          'Securely sending the image to the iCroMaas AI backend.',
+          textAlign: TextAlign.center,
+          style: Theme.of(context).textTheme.bodySmall,
+        ),
+      ],
+    );
+  }
+
+  Widget _buildErrorView(ColorScheme colorScheme) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          width: 100,
+          height: 100,
+          decoration: BoxDecoration(
+            color: colorScheme.error.withValues(alpha: 0.10),
+            shape: BoxShape.circle,
+          ),
+          child: Icon(
+            Icons.error_outline,
+            size: 56,
+            color: colorScheme.error,
+          ),
+        ),
+        const SizedBox(height: 24),
+        Text(
+          'Analysis Failed',
+          textAlign: TextAlign.center,
+          style: Theme.of(context)
+              .textTheme
+              .headlineSmall
+              ?.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
+        ),
+        const SizedBox(height: 12),
+        Text(
+          _errorMessage.isEmpty
+              ? 'Unable to analyze this image.'
+              : _errorMessage,
+          textAlign: TextAlign.center,
+          style: Theme.of(context).textTheme.bodyLarge,
+        ),
+        const SizedBox(height: 28),
+        SizedBox(
+          width: double.infinity,
+          child: ElevatedButton.icon(
+            onPressed: _retry,
+            icon: const Icon(Icons.refresh),
+            label: const Text('Retry Analysis'),
+          ),
+        ),
+        const SizedBox(height: 12),
+        SizedBox(
+          width: double.infinity,
+          child: OutlinedButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            child: const Text('Back'),
+          ),
+        ),
+      ],
     );
   }
 }
